@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1DAEBE4F233DA79700A8ADBB /* Pods_OMG_Group.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1B985484DE38D1A5A565173 /* Pods_OMG_Group.framework */; };
 		F94E5771229C9E5E00CE28F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E5770229C9E5E00CE28F2 /* AppDelegate.swift */; };
 		F94E5773229C9E5E00CE28F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E5772229C9E5E00CE28F2 /* ViewController.swift */; };
 		F94E5776229C9E5E00CE28F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F94E5774229C9E5E00CE28F2 /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F1C2BE9B1905ACD92DF89DE /* Pods-OMG Group.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OMG Group.release.xcconfig"; path = "Pods/Target Support Files/Pods-OMG Group/Pods-OMG Group.release.xcconfig"; sourceTree = "<group>"; };
+		C1BEED5923C21298DE5DE78B /* Pods-OMG Group.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OMG Group.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OMG Group/Pods-OMG Group.debug.xcconfig"; sourceTree = "<group>"; };
+		E1B985484DE38D1A5A565173 /* Pods_OMG_Group.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OMG_Group.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F94E576D229C9E5E00CE28F2 /* OMG Group.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OMG Group.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F94E5770229C9E5E00CE28F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F94E5772229C9E5E00CE28F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DAEBE4F233DA79700A8ADBB /* Pods_OMG_Group.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B6E1BDB030BD4E29CFE31E36 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C1BEED5923C21298DE5DE78B /* Pods-OMG Group.debug.xcconfig */,
+				2F1C2BE9B1905ACD92DF89DE /* Pods-OMG Group.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E7B90A1C6322A0966AC3269E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E1B985484DE38D1A5A565173 /* Pods_OMG_Group.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F94E5764229C9E5D00CE28F2 = {
 			isa = PBXGroup;
 			children = (
 				F94E576F229C9E5E00CE28F2 /* OMG Group */,
 				F94E576E229C9E5E00CE28F2 /* Products */,
+				B6E1BDB030BD4E29CFE31E36 /* Pods */,
+				E7B90A1C6322A0966AC3269E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F94E577F229C9E5F00CE28F2 /* Build configuration list for PBXNativeTarget "OMG Group" */;
 			buildPhases = (
+				5D95A765BDBFFBC6C4DB6EAC /* [CP] Check Pods Manifest.lock */,
 				F94E5769229C9E5D00CE28F2 /* Sources */,
 				F94E576A229C9E5D00CE28F2 /* Frameworks */,
 				F94E576B229C9E5D00CE28F2 /* Resources */,
+				7471FDE7C8B8257C7F160A87 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5D95A765BDBFFBC6C4DB6EAC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OMG Group-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7471FDE7C8B8257C7F160A87 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-OMG Group/Pods-OMG Group-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OMG Group/Pods-OMG Group-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F94E5769229C9E5D00CE28F2 /* Sources */ = {
@@ -280,6 +353,7 @@
 		};
 		F94E5780229C9E5F00CE28F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1BEED5923C21298DE5DE78B /* Pods-OMG Group.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +372,7 @@
 		};
 		F94E5781229C9E5F00CE28F2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F1C2BE9B1905ACD92DF89DE /* Pods-OMG Group.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
