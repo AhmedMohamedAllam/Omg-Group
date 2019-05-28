@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1DAEBE4F233DA79700A8ADBB /* Pods_OMG_Group.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1B985484DE38D1A5A565173 /* Pods_OMG_Group.framework */; };
+		F9276984229DCFDB00747C12 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9276983229DCFDB00747C12 /* ApiManager.swift */; };
 		F94E5771229C9E5E00CE28F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E5770229C9E5E00CE28F2 /* AppDelegate.swift */; };
 		F94E5773229C9E5E00CE28F2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E5772229C9E5E00CE28F2 /* HomeViewController.swift */; };
 		F94E5776229C9E5E00CE28F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F94E5774229C9E5E00CE28F2 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 		2F1C2BE9B1905ACD92DF89DE /* Pods-OMG Group.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OMG Group.release.xcconfig"; path = "Pods/Target Support Files/Pods-OMG Group/Pods-OMG Group.release.xcconfig"; sourceTree = "<group>"; };
 		C1BEED5923C21298DE5DE78B /* Pods-OMG Group.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OMG Group.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OMG Group/Pods-OMG Group.debug.xcconfig"; sourceTree = "<group>"; };
 		E1B985484DE38D1A5A565173 /* Pods_OMG_Group.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OMG_Group.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9276983229DCFDB00747C12 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		F94E576D229C9E5E00CE28F2 /* OMG Group.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OMG Group.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F94E5770229C9E5E00CE28F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F94E5772229C9E5E00CE28F2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				F94E5777229C9E5F00CE28F2 /* Assets.xcassets */,
 				F94E5787229D2B2A00CE28F2 /* app */,
 				F94E577C229C9E5F00CE28F2 /* Info.plist */,
+				F9276983229DCFDB00747C12 /* ApiManager.swift */,
 			);
 			path = "OMG Group";
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 			files = (
 				F94E5773229C9E5E00CE28F2 /* HomeViewController.swift in Sources */,
 				F94E5783229CB4C300CE28F2 /* SideMenuTableViewController.swift in Sources */,
+				F9276984229DCFDB00747C12 /* ApiManager.swift in Sources */,
 				F94E578B229D2DF200CE28F2 /* BaseSideMenuViewController.swift in Sources */,
 				F94E5771229C9E5E00CE28F2 /* AppDelegate.swift in Sources */,
 			);
