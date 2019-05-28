@@ -15,9 +15,8 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureSidemenuGestures()
-    }
-    
 
+    }
     
     fileprivate func configureSidemenuGestures() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -27,6 +26,20 @@ class HomeViewController: UIViewController {
         SideMenuManager.default.menuAddScreenEdgePanGesturesToPresent(toView: self.navigationController!.view)
         SideMenuManager.default.menuFadeStatusBar = false
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "sideMenuSegue", let destination = segue.destination as? UISideMenuNavigationController, let baseMenuVC = destination.children.first as? BaseSideMenuViewController{
+            baseMenuVC.delegate = self
+        }
+    }
+    
+}
+
+extension HomeViewController: SideMenuDelegate{
+    func didSelectItem(at index: Int) {
+        print(index)
+    }
+    
     
 }
 

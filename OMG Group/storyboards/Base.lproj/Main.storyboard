@@ -257,7 +257,7 @@
                     <navigationItem key="navigationItem" id="elG-mP-NBM">
                         <barButtonItem key="leftBarButtonItem" image="menu-icon" id="aK4-PT-BUo">
                             <connections>
-                                <segue destination="67h-hb-586" kind="presentation" id="gtL-Ap-EkO"/>
+                                <segue destination="67h-hb-586" kind="presentation" identifier="sideMenuSegue" id="gtL-Ap-EkO"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
