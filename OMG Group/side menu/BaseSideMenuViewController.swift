@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  BaseSideViewController.swift
 //  OMG Group
 //
 //  Created by Ahmed Allam on 5/28/19.
@@ -7,24 +7,23 @@
 //
 
 import UIKit
-import SideMenu
 
 class BaseSideMenuViewController: UIViewController {
-    
-   
+
+    weak var delegate: SideMenuDelegate?
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureSidemenuGestures()
-    }
-    
-    fileprivate func configureSidemenuGestures() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let menuLeftNavigationController = storyboard.instantiateViewController(withIdentifier: "LeftMenuNavigationController") as! UISideMenuNavigationController
-        SideMenuManager.default.menuLeftNavigationController = menuLeftNavigationController
-        SideMenuManager.default.menuAddPanGestureToPresent(toView: self.navigationController!.navigationBar)
-        SideMenuManager.default.menuAddScreenEdgePanGesturesToPresent(toView: self.navigationController!.view)
-        SideMenuManager.default.menuFadeStatusBar = false
-    }
-    
-}
 
+        // Do any additional setup after loading the view.
+    }
+    
+    
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let sideMenuTableViewController = segue.destination as? SideMenuTableViewController{
+            sideMenuTableViewController.delegate = delegate
+        }
+    }
+
+}

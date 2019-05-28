@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		1DAEBE4F233DA79700A8ADBB /* Pods_OMG_Group.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1B985484DE38D1A5A565173 /* Pods_OMG_Group.framework */; };
 		F94E5771229C9E5E00CE28F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E5770229C9E5E00CE28F2 /* AppDelegate.swift */; };
-		F94E5773229C9E5E00CE28F2 /* BaseSideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E5772229C9E5E00CE28F2 /* BaseSideMenuViewController.swift */; };
+		F94E5773229C9E5E00CE28F2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E5772229C9E5E00CE28F2 /* HomeViewController.swift */; };
 		F94E5776229C9E5E00CE28F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F94E5774229C9E5E00CE28F2 /* Main.storyboard */; };
 		F94E5778229C9E5F00CE28F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F94E5777229C9E5F00CE28F2 /* Assets.xcassets */; };
 		F94E577B229C9E5F00CE28F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F94E5779229C9E5F00CE28F2 /* LaunchScreen.storyboard */; };
 		F94E5783229CB4C300CE28F2 /* SideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E5782229CB4C300CE28F2 /* SideMenuTableViewController.swift */; };
+		F94E578B229D2DF200CE28F2 /* BaseSideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E578A229D2DF200CE28F2 /* BaseSideMenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,12 +23,13 @@
 		E1B985484DE38D1A5A565173 /* Pods_OMG_Group.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OMG_Group.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F94E576D229C9E5E00CE28F2 /* OMG Group.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OMG Group.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F94E5770229C9E5E00CE28F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F94E5772229C9E5E00CE28F2 /* BaseSideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSideMenuViewController.swift; sourceTree = "<group>"; };
+		F94E5772229C9E5E00CE28F2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F94E5775229C9E5E00CE28F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F94E5777229C9E5F00CE28F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F94E577A229C9E5F00CE28F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F94E577C229C9E5F00CE28F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F94E5782229CB4C300CE28F2 /* SideMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewController.swift; sourceTree = "<group>"; };
+		F94E578A229D2DF200CE28F2 /* BaseSideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSideMenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,11 +82,11 @@
 		F94E576F229C9E5E00CE28F2 /* OMG Group */ = {
 			isa = PBXGroup;
 			children = (
+				F94E5788229D2B4D00CE28F2 /* storyboards */,
 				F94E5784229CB4E800CE28F2 /* side menu */,
-				F94E5770229C9E5E00CE28F2 /* AppDelegate.swift */,
-				F94E5774229C9E5E00CE28F2 /* Main.storyboard */,
+				F94E5789229D2B6500CE28F2 /* view controllers */,
 				F94E5777229C9E5F00CE28F2 /* Assets.xcassets */,
-				F94E5779229C9E5F00CE28F2 /* LaunchScreen.storyboard */,
+				F94E5787229D2B2A00CE28F2 /* app */,
 				F94E577C229C9E5F00CE28F2 /* Info.plist */,
 			);
 			path = "OMG Group";
@@ -93,10 +95,35 @@
 		F94E5784229CB4E800CE28F2 /* side menu */ = {
 			isa = PBXGroup;
 			children = (
-				F94E5772229C9E5E00CE28F2 /* BaseSideMenuViewController.swift */,
 				F94E5782229CB4C300CE28F2 /* SideMenuTableViewController.swift */,
+				F94E578A229D2DF200CE28F2 /* BaseSideMenuViewController.swift */,
 			);
 			path = "side menu";
+			sourceTree = "<group>";
+		};
+		F94E5787229D2B2A00CE28F2 /* app */ = {
+			isa = PBXGroup;
+			children = (
+				F94E5770229C9E5E00CE28F2 /* AppDelegate.swift */,
+				F94E5779229C9E5F00CE28F2 /* LaunchScreen.storyboard */,
+			);
+			path = app;
+			sourceTree = "<group>";
+		};
+		F94E5788229D2B4D00CE28F2 /* storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				F94E5774229C9E5E00CE28F2 /* Main.storyboard */,
+			);
+			path = storyboards;
+			sourceTree = "<group>";
+		};
+		F94E5789229D2B6500CE28F2 /* view controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F94E5772229C9E5E00CE28F2 /* HomeViewController.swift */,
+			);
+			path = "view controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,8 +246,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F94E5773229C9E5E00CE28F2 /* BaseSideMenuViewController.swift in Sources */,
+				F94E5773229C9E5E00CE28F2 /* HomeViewController.swift in Sources */,
 				F94E5783229CB4C300CE28F2 /* SideMenuTableViewController.swift in Sources */,
+				F94E578B229D2DF200CE28F2 /* BaseSideMenuViewController.swift in Sources */,
 				F94E5771229C9E5E00CE28F2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

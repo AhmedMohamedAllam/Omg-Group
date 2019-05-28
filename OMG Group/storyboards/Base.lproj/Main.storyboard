@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Base Side Menu View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="BaseSideMenuViewController" customModule="OMG_Group" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -70,10 +70,10 @@
             </objects>
             <point key="canvasLocation" x="1952.1739130434785" y="137.94642857142856"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Side Menu Table View Controller-->
         <scene sceneID="rTS-Rx-dvT">
             <objects>
-                <tableViewController id="Mzh-7e-2cf" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="SideMenuTableViewController" id="Mzh-7e-2cf" customClass="SideMenuTableViewController" customModule="OMG_Group" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="i5r-0v-eDq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="638"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -244,10 +244,10 @@
             </objects>
             <point key="canvasLocation" x="2768.1159420289855" y="137.94642857142856"/>
         </scene>
-        <!--Base Side Menu View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="lqz-KO-kre">
             <objects>
-                <viewController id="jmB-Og-5wU" customClass="BaseSideMenuViewController" customModule="OMG_Group" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="jmB-Og-5wU" customClass="HomeViewController" customModule="OMG_Group" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LtW-fi-iQu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
