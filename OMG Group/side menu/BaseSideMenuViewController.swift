@@ -17,8 +17,6 @@ class BaseSideMenuViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    
-
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let sideMenuTableViewController = segue.destination as? SideMenuTableViewController{
             sideMenuTableViewController.delegate = delegate

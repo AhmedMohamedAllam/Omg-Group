@@ -9,19 +9,53 @@
 import UIKit
 import SideMenu
 import AVKit
+import MediaPlayer
+
 
 class HomeViewController: UIViewController {
     var player: AVPlayer!
     var playerViewController: AVPlayerViewController!
     
+    @IBOutlet weak var radioImageView: UIImageView!
+    @IBOutlet weak var tvChannelImageView: UIImageView!
+    
+    @IBOutlet weak var facebookButton: UIButton!
+    
+    @IBOutlet weak var shareButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureSidemenuGestures()
+        configureImageViewsLayer()
+        configureShareButtonsLayer()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        presentTVStream()
+        navigationController?.makeTransparent()
+    }
+    
+    private func configureShareButtonsLayer(){
+        roundView(facebookButton)
+        roundView(shareButton)
+    }
+    
+    private func configureImageViewsLayer(){
+        roundView(tvChannelImageView)
+        roundView(radioImageView)
+        borderView(tvChannelImageView)
+        borderView(radioImageView)
+    }
+    
+    private func roundView(_ view: UIView){
+        view.layer.cornerRadius = 15
+        view.layer.masksToBounds = true
+    }
+    
+    private func borderView(_ view: UIView){
+        view.layer.borderWidth = 2
+        view.layer.borderColor = UIColor.white.cgColor
+        
     }
     
     fileprivate func configureSidemenuGestures() {
@@ -39,8 +73,8 @@ class HomeViewController: UIViewController {
         }
     }
     
-    private func presentTVStream(){
-        let url = ApiManager.getTVStreamUrl()
+    private func presentStream(with url: URL){
+        setNowPlayingInfo()
         player = AVPlayer(url: url)
         playerViewController = AVPlayerViewController()
         playerViewController.player = player
@@ -50,15 +84,82 @@ class HomeViewController: UIViewController {
             DispatchQueue.main.async {
                 self.player.play()
             }
-            
         }
     }
     
-    private func presentRadioStream(){
+    func setNowPlayingInfo()
+    {
+        let nowPlayingInfoCenter = MPNowPlayingInfoCenter.default()
+        var nowPlayingInfo = nowPlayingInfoCenter.nowPlayingInfo ?? [String: Any]()
         
+        let title = "Omg radio"
+        let album = "Omg Album"
+        let artworkData = Data()
+        let image = UIImage(data: artworkData) ?? UIImage()
+        let artwork = MPMediaItemArtwork(boundsSize: image.size, requestHandler: {  (_) -> UIImage in
+            return image
+        })
+        
+        nowPlayingInfo[MPMediaItemPropertyTitle] = title
+        nowPlayingInfo[MPMediaItemPropertyAlbumTitle] = album
+        nowPlayingInfo[MPMediaItemPropertyArtwork] = artwork
+        
+        nowPlayingInfoCenter.nowPlayingInfo = nowPlayingInfo
+    }
+
+    
+    
+    //MARK:- IBActions
+    
+    fileprivate func openUrl(_ socialUrl: URL?) {
+        if let url = socialUrl {
+            if UIApplication.shared.canOpenURL(url) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            }
+        }
+    }
+    
+    @IBAction func facebookDidPressed(_ sender: Any) {
+        let facebookUrl = ApiManager.getFacebookUrl()
+        openUrl(facebookUrl)
+    }
+    
+    @IBAction func youtubeDidPressed(_ sender: Any) {
+        let youtubeUrl = ApiManager.getYoutubeUrl()
+        openUrl(youtubeUrl)
+    }
+    
+    @IBAction func linkedinDidPressed(_ sender: Any) {
+        let linkedinUrl = ApiManager.getLinkedinUrl()
+        openUrl(linkedinUrl)
     }
     
     
+    @IBAction func shareDidPressed(_ sender: Any) {
+        
+    }
+    
+    @IBAction func tvDidPressed(_ sender: Any) {
+        let tvUrl = ApiManager.getTVStreamUrl()
+        presentStream(with: tvUrl)
+    }
+    
+    
+    @IBAction func radioDidPressed(_ sender: Any) {
+        let radioUrl = ApiManager.getRadioStreamUrl()
+        presentStream(with: radioUrl)
+    }
+    
+}
+
+extension HomeViewController: SideMenuDelegate{
+    func didSelectItem(at index: Int) {
+        print(index)
+    }
+}
+
+
+extension HomeViewController{
     func checkError() {
         // Get AVPlayerItem
         
@@ -104,13 +205,4 @@ class HomeViewController: UIViewController {
         let error = notification.userInfo!["AVPlayerItemFailedToPlayToEndTimeErrorKey"] as! Error
         NSLog("Error: \(error.localizedDescription), error: \(error)")
     }
-    
-}
-
-extension HomeViewController: SideMenuDelegate{
-    func didSelectItem(at index: Int) {
-        print(index)
-    }
-    
-    
 }

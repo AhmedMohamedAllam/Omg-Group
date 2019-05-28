@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "aerial_satellite_earth_space_usa-115863.jpg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "icons8-menu-filled-90.png",
       "scale" : "2x"
     },
     {
@@ -17,8 +17,5 @@
   "info" : {
     "version" : 1,
     "author" : "xcode"
-  },
-  "properties" : {
-    "template-rendering-intent" : "original"
   }
 }

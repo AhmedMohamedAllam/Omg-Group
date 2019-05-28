@@ -11,15 +11,29 @@ import Foundation
 struct ApiManager {
     
     static func getTVStreamUrl() -> URL{
-        let urlString =
-//        "http://devimages.apple.com/iphone/samples/bipbop/bipbopall.m3u8"
-//        "https://www.radiantmediaplayer.com/media/bbb-360p.mp4"
-        "http://media6.smc-host.com:1935/omgchannel.net/omgtv/playlist.m3u8"
+        let urlString = "http://media6.smc-host.com:1935/omgchannel.net/omgtv/playlist.m3u8"
         return URL(string: urlString)!
     }
     
     static func getRadioStreamUrl() -> URL{
-        let urlString = "http://media6.smc-host.com:1935/omgchannel.net/omgtv/playlist.m3u8"
+        let urlString = "http://account30.livebox.co.in/oohlivetvhls/live.m3u8"
         return URL(string: urlString)!
     }
+    
+    static func getFacebookUrl() -> URL{
+        let urlString = "https://www.facebook.com/Omg-Channel-1687614811490132/"
+        return URL(string: urlString)!
+    }
+    
+    static func getYoutubeUrl() -> URL{
+        let urlString = "https://m.youtube.com/channel/UCqc1YeG_iEwmrXVe4wPUhTg"
+        return URL(string: urlString)!
+    }
+    
+    static func getLinkedinUrl() -> URL{
+        let urlString = "https://www.linkedin.com/company/omg-channel"
+        return URL(string: urlString)!
+    }
+    
+    
 }
