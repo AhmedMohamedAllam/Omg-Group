@@ -17,6 +17,7 @@
 		F94E577B229C9E5F00CE28F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F94E5779229C9E5F00CE28F2 /* LaunchScreen.storyboard */; };
 		F94E5783229CB4C300CE28F2 /* SideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E5782229CB4C300CE28F2 /* SideMenuTableViewController.swift */; };
 		F94E578B229D2DF200CE28F2 /* BaseSideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E578A229D2DF200CE28F2 /* BaseSideMenuViewController.swift */; };
+		F9E7F62F229EFEA9002FB858 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7F62E229EFEA9002FB858 /* PlayerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		F94E577C229C9E5F00CE28F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F94E5782229CB4C300CE28F2 /* SideMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewController.swift; sourceTree = "<group>"; };
 		F94E578A229D2DF200CE28F2 /* BaseSideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSideMenuViewController.swift; sourceTree = "<group>"; };
+		F9E7F62E229EFEA9002FB858 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				F94E577C229C9E5F00CE28F2 /* Info.plist */,
 				F9276983229DCFDB00747C12 /* ApiManager.swift */,
 				F9276985229DFAF400747C12 /* Extensions.swift */,
+				F9E7F62E229EFEA9002FB858 /* PlayerViewController.swift */,
 			);
 			path = "OMG Group";
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 				F94E5773229C9E5E00CE28F2 /* HomeViewController.swift in Sources */,
 				F9276986229DFAF400747C12 /* Extensions.swift in Sources */,
 				F94E5783229CB4C300CE28F2 /* SideMenuTableViewController.swift in Sources */,
+				F9E7F62F229EFEA9002FB858 /* PlayerViewController.swift in Sources */,
 				F9276984229DCFDB00747C12 /* ApiManager.swift in Sources */,
 				F94E578B229D2DF200CE28F2 /* BaseSideMenuViewController.swift in Sources */,
 				F94E5771229C9E5E00CE28F2 /* AppDelegate.swift in Sources */,

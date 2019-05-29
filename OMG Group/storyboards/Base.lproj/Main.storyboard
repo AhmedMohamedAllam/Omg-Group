@@ -397,15 +397,28 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="facebookButton" destination="75k-I2-0n2" id="Ueq-it-mkO"/>
                         <outlet property="radioImageView" destination="FQ7-gS-7Qs" id="1OQ-J9-NUk"/>
-                        <outlet property="shareButton" destination="BKM-vy-qmg" id="gD7-CM-3It"/>
                         <outlet property="tvChannelImageView" destination="gV9-cG-YWc" id="9tM-B2-aZ6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4yb-Pr-kZG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="231.8840579710145" y="137.94642857142856"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Q1q-hG-sP9">
+            <objects>
+                <viewController id="kJh-cL-J6s" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jEK-8l-9El">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="jpA-EI-j3p"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cea-Ob-86d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="288" y="830"/>
         </scene>
         <!--Side Menu Navigation Controller-->
         <scene sceneID="Z4M-1h-aGc">
