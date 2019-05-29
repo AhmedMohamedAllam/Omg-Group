@@ -64,7 +64,6 @@ class HomeViewController: UIViewController {
     }
     
     
-    
     @IBAction func tvDidPressed(_ sender: Any) {
         playerViewController.playTV(in: self)
     }
@@ -72,6 +71,16 @@ class HomeViewController: UIViewController {
     
     @IBAction func radioDidPressed(_ sender: Any) {
         playerViewController.playRadio(in: self)
+    }
+    
+    private func openAboutUs(){
+        let url = ApiManager.getAboutUsUrl()
+        openUrl(url)
+    }
+    
+    private func openAdvertisingWithUs(){
+        let url = ApiManager.getAdvertisingWithUsUrl()
+        openUrl(url)
     }
     
 }
@@ -113,6 +122,8 @@ extension HomeViewController{
         
     }
 }
+
+
 //
 //extension HomeViewController{
 //    func checkError(for player: AVPlayer) {

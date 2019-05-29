@@ -35,5 +35,15 @@ struct ApiManager {
         return URL(string: urlString)!
     }
     
+    static func getAboutUsUrl() -> URL{
+        let urlString = "http://omgchannel.net/OMG/About-Us"
+        return URL(string: urlString)!
+    }
+    
+    static func getAdvertisingWithUsUrl() -> URL{
+        let urlString = "http://omgchannel.net/OMG?journal_blog_post_id=75"
+        return URL(string: urlString)!
+    }
+    
     
 }
