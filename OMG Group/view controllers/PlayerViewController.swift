@@ -43,6 +43,14 @@ class PlayerViewController {
         presentStream(player: radioPlayer(), in: viewcontroller)
     }
     
+    func setRadioPlaying(isPlaying: Bool){
+        UserDefaults.standard.set(isPlaying, forKey: "radioIsPlaying")
+    }
+    
+    func radioIsPlaying() -> Bool{
+        return UserDefaults.standard.bool(forKey:"radioIsPlaying")
+    }
+    
     private func tvPlayer() -> AVPlayer{
         let tvUrl = ApiManager.getTVStreamUrl()
         return AVPlayer(url: tvUrl)

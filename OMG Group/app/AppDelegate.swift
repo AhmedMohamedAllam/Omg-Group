@@ -35,7 +35,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {
-        PlayerViewController.shared.removePlayer()
+        if PlayerViewController.shared.radioIsPlaying(){
+            PlayerViewController.shared.removePlayer()
+        }
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
@@ -43,7 +45,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
-      PlayerViewController.shared.reAttatchPlayer()
+        if PlayerViewController.shared.radioIsPlaying(){
+            PlayerViewController.shared.reAttatchPlayer()
+        }
     }
 
     func applicationWillTerminate(_ application: UIApplication) {

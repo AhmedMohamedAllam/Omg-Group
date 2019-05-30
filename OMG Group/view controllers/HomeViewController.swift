@@ -34,6 +34,7 @@ class HomeViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         navigationController?.makeTransparent()
+        playerViewController.setRadioPlaying(isPlaying: false)
     }
 
     
@@ -84,6 +85,7 @@ class HomeViewController: UIViewController {
     
     
     @IBAction func radioDidPressed(_ sender: Any) {
+        playerViewController.setRadioPlaying(isPlaying: true)
         playerViewController.playRadio(in: self)
     }
     
