@@ -18,7 +18,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var radioImageView: UIImageView!
     @IBOutlet weak var tvChannelImageView: UIImageView!
 
-    
+    private var currentIndex = -1
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "sideMenuSegue", let destination = segue.destination as? UISideMenuNavigationController, let baseMenuVC = destination.children.first as? BaseSideMenuViewController{
             baseMenuVC.delegate = self
@@ -54,7 +54,15 @@ class HomeViewController: UIViewController {
         view.layer.borderColor = UIColor.white.cgColor
     }
     
-    fileprivate func configureSidemenuGestures() {
+    private func openUrl(_ socialUrl: URL?) {
+        if let url = socialUrl {
+            if UIApplication.shared.canOpenURL(url) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            }
+        }
+    }
+    
+    private func configureSidemenuGestures() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let menuLeftNavigationController = storyboard.instantiateViewController(withIdentifier: "LeftMenuNavigationController") as! UISideMenuNavigationController
         SideMenuManager.default.menuLeftNavigationController = menuLeftNavigationController
@@ -63,6 +71,12 @@ class HomeViewController: UIViewController {
         SideMenuManager.default.menuFadeStatusBar = false
     }
     
+    func share(url: URL) {
+        let sharedObjects:[AnyObject] = [url as AnyObject]
+        let activityViewController = UIActivityViewController(activityItems : sharedObjects, applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = view
+        present(activityViewController, animated: true, completion: nil)
+    }
     
     @IBAction func tvDidPressed(_ sender: Any) {
         playerViewController.playTV(in: self)
@@ -78,7 +92,7 @@ class HomeViewController: UIViewController {
         openUrl(url)
     }
     
-    private func openAdvertisingWithUs(){
+    private func openAdvertiseWithUs(){
         let url = ApiManager.getAdvertisingWithUsUrl()
         openUrl(url)
     }
@@ -87,20 +101,27 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: SideMenuDelegate{
     func didSelectItem(at index: Int) {
-        print(index)
+        switch index {
+        case 0:
+            navigationController?.dismiss(animated: true, completion: nil)
+            playerViewController.playTV(in: self)
+        case 1:
+            navigationController?.dismiss(animated: true, completion: nil)
+            playerViewController.playRadio(in: self)
+        case 2:
+            openAboutUs()
+        case 3:
+            openAdvertiseWithUs()
+        default:
+            print("Not found")
+        }
     }
 }
 
 //MARK:- Social media buttons action
 extension HomeViewController{
     //MARK:- IBActions
-    fileprivate func openUrl(_ socialUrl: URL?) {
-        if let url = socialUrl {
-            if UIApplication.shared.canOpenURL(url) {
-                UIApplication.shared.open(url, options: [:], completionHandler: nil)
-            }
-        }
-    }
+    
     
     @IBAction func facebookDidPressed(_ sender: Any) {
         let facebookUrl = ApiManager.getFacebookUrl()
@@ -119,7 +140,7 @@ extension HomeViewController{
     
     
     @IBAction func shareDidPressed(_ sender: Any) {
-        
+        share(url: ApiManager.getAboutUsUrl())
     }
 }
 

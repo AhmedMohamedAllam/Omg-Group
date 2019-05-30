@@ -88,6 +88,7 @@
 		F94E576F229C9E5E00CE28F2 /* OMG Group */ = {
 			isa = PBXGroup;
 			children = (
+				F9E7F630229F55AC002FB858 /* controllers */,
 				F94E5788229D2B4D00CE28F2 /* storyboards */,
 				F94E5784229CB4E800CE28F2 /* side menu */,
 				F94E5789229D2B6500CE28F2 /* view controllers */,
@@ -96,7 +97,6 @@
 				F94E577C229C9E5F00CE28F2 /* Info.plist */,
 				F9276983229DCFDB00747C12 /* ApiManager.swift */,
 				F9276985229DFAF400747C12 /* Extensions.swift */,
-				F9E7F62E229EFEA9002FB858 /* PlayerViewController.swift */,
 			);
 			path = "OMG Group";
 			sourceTree = "<group>";
@@ -130,9 +130,17 @@
 		F94E5789229D2B6500CE28F2 /* view controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F9E7F62E229EFEA9002FB858 /* PlayerViewController.swift */,
 				F94E5772229C9E5E00CE28F2 /* HomeViewController.swift */,
 			);
 			path = "view controllers";
+			sourceTree = "<group>";
+		};
+		F9E7F630229F55AC002FB858 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
