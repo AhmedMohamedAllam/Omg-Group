@@ -11,14 +11,15 @@ import MediaPlayer
 
 class PlayerViewController {
     static let shared = PlayerViewController()
-    var playerViewController: AVPlayerViewController!
+    var playerLayer: AVPlayerLayer!
     var currentRadioPlayer: AVPlayer?
     
     private init() {
-        playerViewController = AVPlayerViewController()
+        playerLayer = AVPlayerLayer(player: currentRadioPlayer)
     }
     
     func play(with player: AVPlayer, in viewController: UIViewController) {
+        let playerViewController = AVPlayerViewController()
         playerViewController.player = player
         player.allowsExternalPlayback = true
         viewController.present(playerViewController, animated: true){
@@ -28,11 +29,11 @@ class PlayerViewController {
         }
     }
     func reAttatchPlayer() {
-        playerViewController.player = currentRadioPlayer
+        playerLayer.player = currentRadioPlayer
     }
     
     func removePlayer(){
-        playerViewController.player = nil
+        playerLayer.player = nil
     }
     
     func playTV(in viewcontroller: UIViewController) {
@@ -43,27 +44,19 @@ class PlayerViewController {
         presentStream(player: radioPlayer(), in: viewcontroller)
     }
     
-    func setRadioPlaying(isPlaying: Bool){
-        UserDefaults.standard.set(isPlaying, forKey: "radioIsPlaying")
-    }
-    
-    func radioIsPlaying() -> Bool{
-        return UserDefaults.standard.bool(forKey:"radioIsPlaying")
-    }
-    
     private func tvPlayer() -> AVPlayer{
         let tvUrl = ApiManager.getTVStreamUrl()
         return AVPlayer(url: tvUrl)
     }
     
-    private func radioPlayer() -> AVPlayer{
+    func radioPlayer() -> AVPlayer{
         let radioUrl = ApiManager.getRadioStreamUrl()
+        setNowPlayingInfo()
         currentRadioPlayer = AVPlayer(url: radioUrl)
         return currentRadioPlayer!
     }
     
     private func presentStream(player: AVPlayer, in viewController: UIViewController){
-        setNowPlayingInfo()
         play(with: player, in: viewController)
     }
     
@@ -74,7 +67,7 @@ class PlayerViewController {
         var nowPlayingInfo = nowPlayingInfoCenter.nowPlayingInfo ?? [String: Any]()
         
         let title = "Omg radio"
-        let album = "Omg Album"
+        let album = "<< live now >>"
         let artworkData = Data()
         let image = UIImage(data: artworkData) ?? UIImage()
         let artwork = MPMediaItemArtwork(boundsSize: image.size, requestHandler: {  (_) -> UIImage in

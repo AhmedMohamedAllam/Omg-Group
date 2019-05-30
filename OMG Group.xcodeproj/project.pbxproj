@@ -18,6 +18,7 @@
 		F94E5783229CB4C300CE28F2 /* SideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E5782229CB4C300CE28F2 /* SideMenuTableViewController.swift */; };
 		F94E578B229D2DF200CE28F2 /* BaseSideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E578A229D2DF200CE28F2 /* BaseSideMenuViewController.swift */; };
 		F9E7F62F229EFEA9002FB858 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7F62E229EFEA9002FB858 /* PlayerViewController.swift */; };
+		F9E7F632229F65D6002FB858 /* CustomRadioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7F631229F65D6002FB858 /* CustomRadioViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		F94E5782229CB4C300CE28F2 /* SideMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewController.swift; sourceTree = "<group>"; };
 		F94E578A229D2DF200CE28F2 /* BaseSideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSideMenuViewController.swift; sourceTree = "<group>"; };
 		F9E7F62E229EFEA9002FB858 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		F9E7F631229F65D6002FB858 /* CustomRadioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRadioViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 			children = (
 				F9E7F62E229EFEA9002FB858 /* PlayerViewController.swift */,
 				F94E5772229C9E5E00CE28F2 /* HomeViewController.swift */,
+				F9E7F631229F65D6002FB858 /* CustomRadioViewController.swift */,
 			);
 			path = "view controllers";
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 				F94E5773229C9E5E00CE28F2 /* HomeViewController.swift in Sources */,
 				F9276986229DFAF400747C12 /* Extensions.swift in Sources */,
 				F94E5783229CB4C300CE28F2 /* SideMenuTableViewController.swift in Sources */,
+				F9E7F632229F65D6002FB858 /* CustomRadioViewController.swift in Sources */,
 				F9E7F62F229EFEA9002FB858 /* PlayerViewController.swift in Sources */,
 				F9276984229DCFDB00747C12 /* ApiManager.swift in Sources */,
 				F94E578B229D2DF200CE28F2 /* BaseSideMenuViewController.swift in Sources */,

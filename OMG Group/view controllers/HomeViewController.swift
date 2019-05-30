@@ -34,7 +34,6 @@ class HomeViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         navigationController?.makeTransparent()
-        playerViewController.setRadioPlaying(isPlaying: false)
     }
 
     
@@ -85,8 +84,13 @@ class HomeViewController: UIViewController {
     
     
     @IBAction func radioDidPressed(_ sender: Any) {
-        playerViewController.setRadioPlaying(isPlaying: true)
-        playerViewController.playRadio(in: self)
+        presentCustomRadioView()
+    }
+    
+    private func presentCustomRadioView(){
+        let customRadioVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CustomRadioViewController") as! CustomRadioViewController
+        customRadioVC.player = playerViewController.radioPlayer()
+        navigationController?.pushViewController(customRadioVC, animated: true)
     }
     
     private func openAboutUs(){
@@ -109,7 +113,7 @@ extension HomeViewController: SideMenuDelegate{
             playerViewController.playTV(in: self)
         case 1:
             navigationController?.dismiss(animated: true, completion: nil)
-            playerViewController.playRadio(in: self)
+            presentCustomRadioView()
         case 2:
             openAboutUs()
         case 3:
