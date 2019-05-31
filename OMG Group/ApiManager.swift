@@ -16,7 +16,7 @@ struct ApiManager {
     }
     
     static func getRadioStreamUrl() -> URL{
-        let urlString = "http://account30.livebox.co.in/oohlivetvhls/live.m3u8"
+        let urlString = "http://oohlivetv.co/live/omgradio/index.m3u8"
         return URL(string: urlString)!
     }
     

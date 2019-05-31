@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="GE-Thameen-Book-Italic_12.otf">
+            <string>GEThameen-BookItalic</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Base Side Menu View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -383,25 +388,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="custom-radio" translatesAutoresizingMaskIntoConstraints="NO" id="i9H-vN-J51">
-                                <rect key="frame" x="16" y="76" width="382" height="269"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="radio-background" translatesAutoresizingMaskIntoConstraints="NO" id="cGT-EG-eu3">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="إسمع مع العالم" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GIH-s2-cRp">
-                                <rect key="frame" x="0.0" y="345" width="414" height="42"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <nil key="textColor"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="custom-radio" translatesAutoresizingMaskIntoConstraints="NO" id="i9H-vN-J51">
+                                <rect key="frame" x="0.0" y="44" width="414" height="233"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The world listen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GIH-s2-cRp">
+                                <rect key="frame" x="0.0" y="277" width="414" height="42.5"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="راديو او ام جي" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YTH-eR-wSJ">
-                                <rect key="frame" x="0.0" y="403" width="414" height="42"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="راديو اوامچي" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YTH-eR-wSJ">
+                                <rect key="frame" x="0.0" y="319.5" width="414" height="66.5"/>
+                                <fontDescription key="fontDescription" name="GEThameen-BookItalic" family="GE Thameen" pointSize="50"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="العالم يستمع" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aHE-E9-gXY">
-                                <rect key="frame" x="0.0" y="461" width="414" height="42"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="0.0" y="394" width="414" height="53"/>
+                                <fontDescription key="fontDescription" name="GEThameen-BookItalic" family="GE Thameen" pointSize="40"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ffC-H8-CXN">
@@ -427,11 +435,11 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;&lt; live now &gt;&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aq5-24-dxV">
                                         <rect key="frame" x="138" y="2" width="138.5" height="24"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                        <color key="textColor" red="0.83651918172836304" green="0.34300398826599121" blue="0.27055260539054871" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="ey2-05-b0A" firstAttribute="top" secondItem="aq5-24-dxV" secondAttribute="bottom" constant="4" id="Csw-nD-CCy"/>
                                     <constraint firstItem="ey2-05-b0A" firstAttribute="centerX" secondItem="zdF-0i-CFc" secondAttribute="centerX" id="S4f-dV-DVb"/>
@@ -441,27 +449,36 @@
                                     <constraint firstAttribute="height" constant="100" id="wY8-FE-rXs"/>
                                 </constraints>
                             </view>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="DtE-TP-Ip2">
+                                <rect key="frame" x="197" y="257" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="jpA-EI-j3p" firstAttribute="trailing" secondItem="i9H-vN-J51" secondAttribute="trailing" constant="16" id="3iK-Ed-g6N"/>
+                            <constraint firstItem="jpA-EI-j3p" firstAttribute="trailing" secondItem="i9H-vN-J51" secondAttribute="trailing" id="3iK-Ed-g6N"/>
                             <constraint firstItem="jpA-EI-j3p" firstAttribute="trailing" secondItem="aHE-E9-gXY" secondAttribute="trailing" id="4PN-86-mds"/>
                             <constraint firstItem="zdF-0i-CFc" firstAttribute="leading" secondItem="jpA-EI-j3p" secondAttribute="leading" id="4t2-jC-9dX"/>
                             <constraint firstItem="jpA-EI-j3p" firstAttribute="trailing" secondItem="ffC-H8-CXN" secondAttribute="trailing" id="8Rt-JC-PUC"/>
-                            <constraint firstItem="i9H-vN-J51" firstAttribute="leading" secondItem="jpA-EI-j3p" secondAttribute="leading" constant="16" id="B3Y-PO-iSM"/>
+                            <constraint firstItem="i9H-vN-J51" firstAttribute="leading" secondItem="jpA-EI-j3p" secondAttribute="leading" id="B3Y-PO-iSM"/>
+                            <constraint firstItem="cGT-EG-eu3" firstAttribute="top" secondItem="jEK-8l-9El" secondAttribute="top" id="CyT-fV-rKk"/>
+                            <constraint firstItem="i9H-vN-J51" firstAttribute="top" secondItem="jpA-EI-j3p" secondAttribute="top" id="Dr5-SS-B4z"/>
                             <constraint firstItem="jpA-EI-j3p" firstAttribute="trailing" secondItem="GIH-s2-cRp" secondAttribute="trailing" id="F1S-vh-Xas"/>
+                            <constraint firstItem="DtE-TP-Ip2" firstAttribute="bottom" secondItem="i9H-vN-J51" secondAttribute="bottom" id="Grx-uS-CQv"/>
                             <constraint firstItem="jpA-EI-j3p" firstAttribute="trailing" secondItem="zdF-0i-CFc" secondAttribute="trailing" id="IvH-dx-JLn"/>
                             <constraint firstItem="jpA-EI-j3p" firstAttribute="bottom" secondItem="ffC-H8-CXN" secondAttribute="bottom" id="MjY-fe-QhP"/>
-                            <constraint firstItem="i9H-vN-J51" firstAttribute="top" secondItem="jpA-EI-j3p" secondAttribute="top" constant="32" id="Mx4-tY-K8u"/>
                             <constraint firstItem="GIH-s2-cRp" firstAttribute="leading" secondItem="jpA-EI-j3p" secondAttribute="leading" id="Pdb-AW-IR8"/>
+                            <constraint firstItem="cGT-EG-eu3" firstAttribute="leading" secondItem="jpA-EI-j3p" secondAttribute="leading" id="PtC-Be-S6t"/>
                             <constraint firstItem="ffC-H8-CXN" firstAttribute="leading" secondItem="jpA-EI-j3p" secondAttribute="leading" id="Tnq-4t-mcU"/>
+                            <constraint firstItem="DtE-TP-Ip2" firstAttribute="centerX" secondItem="jEK-8l-9El" secondAttribute="centerX" id="W0e-fr-6PB"/>
                             <constraint firstAttribute="trailing" secondItem="YTH-eR-wSJ" secondAttribute="trailing" id="dc3-jK-7s8"/>
-                            <constraint firstItem="aHE-E9-gXY" firstAttribute="top" secondItem="YTH-eR-wSJ" secondAttribute="bottom" constant="16" id="fHJ-xg-Qr4"/>
-                            <constraint firstItem="YTH-eR-wSJ" firstAttribute="top" secondItem="GIH-s2-cRp" secondAttribute="bottom" constant="16" id="fKP-Qr-Jxt"/>
+                            <constraint firstItem="aHE-E9-gXY" firstAttribute="top" secondItem="YTH-eR-wSJ" secondAttribute="bottom" constant="8" id="fHJ-xg-Qr4"/>
+                            <constraint firstItem="YTH-eR-wSJ" firstAttribute="top" secondItem="GIH-s2-cRp" secondAttribute="bottom" id="fKP-Qr-Jxt"/>
                             <constraint firstItem="YTH-eR-wSJ" firstAttribute="leading" secondItem="jpA-EI-j3p" secondAttribute="leading" id="iUV-oE-GMT"/>
-                            <constraint firstItem="i9H-vN-J51" firstAttribute="height" secondItem="jEK-8l-9El" secondAttribute="height" multiplier="0.3" id="rVO-Gd-xAJ"/>
+                            <constraint firstItem="i9H-vN-J51" firstAttribute="height" secondItem="jEK-8l-9El" secondAttribute="height" multiplier="0.26" id="rVO-Gd-xAJ"/>
+                            <constraint firstAttribute="bottom" secondItem="cGT-EG-eu3" secondAttribute="bottom" id="rYq-v3-eLA"/>
                             <constraint firstItem="ffC-H8-CXN" firstAttribute="top" secondItem="zdF-0i-CFc" secondAttribute="bottom" id="tPx-pH-LYz"/>
                             <constraint firstItem="aHE-E9-gXY" firstAttribute="leading" secondItem="jpA-EI-j3p" secondAttribute="leading" id="uDa-wz-Wdo"/>
+                            <constraint firstItem="jpA-EI-j3p" firstAttribute="trailing" secondItem="cGT-EG-eu3" secondAttribute="trailing" id="xtK-4W-dkG"/>
                             <constraint firstItem="GIH-s2-cRp" firstAttribute="top" secondItem="i9H-vN-J51" secondAttribute="bottom" id="zvI-q9-dnH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jpA-EI-j3p"/>
@@ -469,11 +486,12 @@
                     <connections>
                         <outlet property="pauseAndPlayButton" destination="ey2-05-b0A" id="MIp-MQ-nKh"/>
                         <outlet property="radioContainerView" destination="ffC-H8-CXN" id="alh-RT-4P1"/>
+                        <outlet property="worldListenLabel" destination="aHE-E9-gXY" id="5Gd-FS-y8g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cea-Ob-86d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="288" y="830"/>
+            <point key="canvasLocation" x="286.95652173913044" y="829.6875"/>
         </scene>
         <!--Side Menu Navigation Controller-->
         <scene sceneID="Z4M-1h-aGc">
@@ -524,6 +542,7 @@
         <image name="menu-icon" width="45" height="45"/>
         <image name="pause" width="90" height="90"/>
         <image name="radio" width="3508" height="2480"/>
+        <image name="radio-background" width="1000" height="1134"/>
         <image name="share" width="45" height="45"/>
         <image name="sidemenu-0" width="90" height="90"/>
         <image name="sidemenu-1" width="90" height="90"/>
@@ -531,4 +550,5 @@
         <image name="sidemenu-3" width="96" height="96"/>
         <image name="youtube" width="96" height="96"/>
     </resources>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

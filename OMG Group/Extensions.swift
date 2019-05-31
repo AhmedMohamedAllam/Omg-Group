@@ -16,3 +16,8 @@ extension UINavigationController{
         view.backgroundColor = .clear
     }
 }
+
+extension Notification.Name{
+    static let radioDidPlay = Notification.Name("radioDidPlay")
+    static let radioDidPause = Notification.Name("radioDidPause")
+}

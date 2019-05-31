@@ -14,13 +14,19 @@ class CustomRadioViewController: UIViewController {
     @IBOutlet weak var radioContainerView: UIView!
     @IBOutlet weak var pauseAndPlayButton: UIButton!
     
+    @IBOutlet weak var listenToTheWorldLabel: UILabel!
+    @IBOutlet weak var worldListenLabel: UILabel!
     var player: AVPlayer!
-    var isPlaying = true
+    var isPlaying = true{
+        didSet{
+            updatePauseAndPlayButtonImage()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         addVideoPlayer(to: radioContainerView)
-        // Do any additional setup after loading the view.
+        registerForPlayAndPause()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -31,11 +37,9 @@ class CustomRadioViewController: UIViewController {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         player.pause()
-        
     }
     
     @IBAction func pauseAndPlay(_ sender: Any) {
-       updatePauseAndPlayButtonImage()
         if isPlaying{
             player.pause()
         }else{
@@ -44,13 +48,26 @@ class CustomRadioViewController: UIViewController {
         isPlaying = !isPlaying
     }
     
+    deinit {
+        print("deinit")
+        NotificationCenter.default.removeObserver(self)
+    }
+    
     private func updatePauseAndPlayButtonImage(){
-        let imageName = isPlaying ? "play" : "pause"
+        let imageName = isPlaying ? "pause" : "play"
         let image = UIImage(named: imageName)
         pauseAndPlayButton.setImage(image, for: .normal)
     }
     
-  
+    private func registerForPlayAndPause() {
+        NotificationCenter.default.addObserver(forName: .radioDidPlay, object: nil, queue: nil) { [weak self] (notification) in
+            self?.isPlaying = true
+        }
+        
+        NotificationCenter.default.addObserver(forName: .radioDidPause, object: nil, queue: nil) { [weak self] (notification) in
+            self?.isPlaying = false
+        }
+    }
     
     func addVideoPlayer(to view: UIView) {
         let layer = PlayerViewController.shared.playerLayer!

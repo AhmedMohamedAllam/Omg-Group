@@ -18,6 +18,10 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var radioImageView: UIImageView!
     @IBOutlet weak var tvChannelImageView: UIImageView!
 
+    override var preferredStatusBarStyle: UIStatusBarStyle{
+        return .lightContent
+    }
+    
     private var currentIndex = -1
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "sideMenuSegue", let destination = segue.destination as? UISideMenuNavigationController, let baseMenuVC = destination.children.first as? BaseSideMenuViewController{
@@ -29,6 +33,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         configureSidemenuGestures()
         configureImageViewsLayer()
+        navigationController?.navigationBar.barStyle = .black
     }
     
     override func viewDidAppear(_ animated: Bool) {

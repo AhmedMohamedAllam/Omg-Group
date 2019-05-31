@@ -19,6 +19,7 @@
 		F94E578B229D2DF200CE28F2 /* BaseSideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E578A229D2DF200CE28F2 /* BaseSideMenuViewController.swift */; };
 		F9E7F62F229EFEA9002FB858 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7F62E229EFEA9002FB858 /* PlayerViewController.swift */; };
 		F9E7F632229F65D6002FB858 /* CustomRadioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7F631229F65D6002FB858 /* CustomRadioViewController.swift */; };
+		F9E7F63422A1414B002FB858 /* GE-Thameen-Book-Italic_12.otf in Resources */ = {isa = PBXBuildFile; fileRef = F9E7F63322A13F90002FB858 /* GE-Thameen-Book-Italic_12.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		F94E578A229D2DF200CE28F2 /* BaseSideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSideMenuViewController.swift; sourceTree = "<group>"; };
 		F9E7F62E229EFEA9002FB858 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		F9E7F631229F65D6002FB858 /* CustomRadioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRadioViewController.swift; sourceTree = "<group>"; };
+		F9E7F63322A13F90002FB858 /* GE-Thameen-Book-Italic_12.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GE-Thameen-Book-Italic_12.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 		F94E5787229D2B2A00CE28F2 /* app */ = {
 			isa = PBXGroup;
 			children = (
+				F9E7F63322A13F90002FB858 /* GE-Thameen-Book-Italic_12.otf */,
 				F94E5770229C9E5E00CE28F2 /* AppDelegate.swift */,
 				F94E5779229C9E5F00CE28F2 /* LaunchScreen.storyboard */,
 			);
@@ -211,6 +214,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9E7F63422A1414B002FB858 /* GE-Thameen-Book-Italic_12.otf in Resources */,
 				F94E577B229C9E5F00CE28F2 /* LaunchScreen.storyboard in Resources */,
 				F94E5778229C9E5F00CE28F2 /* Assets.xcassets in Resources */,
 				F94E5776229C9E5E00CE28F2 /* Main.storyboard in Resources */,
