@@ -11,7 +11,7 @@ import Foundation
 struct ApiManager {
     
     static func getTVStreamUrl() -> URL{
-        let urlString = "http://media6.smc-host.com:1935/omgchannel.net/omgtv/playlist.m3u8"
+        let urlString = "http://oohlivetv.co/live/omgtv/index.m3u8"
         return URL(string: urlString)!
     }
     

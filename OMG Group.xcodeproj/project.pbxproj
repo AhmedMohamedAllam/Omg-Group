@@ -20,6 +20,8 @@
 		F9E7F62F229EFEA9002FB858 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7F62E229EFEA9002FB858 /* PlayerViewController.swift */; };
 		F9E7F632229F65D6002FB858 /* CustomRadioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7F631229F65D6002FB858 /* CustomRadioViewController.swift */; };
 		F9E7F63422A1414B002FB858 /* GE-Thameen-Book-Italic_12.otf in Resources */ = {isa = PBXBuildFile; fileRef = F9E7F63322A13F90002FB858 /* GE-Thameen-Book-Italic_12.otf */; };
+		F9E7F63B22A34AEC002FB858 /* Swift+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7F63A22A34AEC002FB858 /* Swift+Gif.swift */; };
+		F9E7F63D22A34B86002FB858 /* waves.gif in Resources */ = {isa = PBXBuildFile; fileRef = F9E7F63C22A34B85002FB858 /* waves.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		F9E7F62E229EFEA9002FB858 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		F9E7F631229F65D6002FB858 /* CustomRadioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRadioViewController.swift; sourceTree = "<group>"; };
 		F9E7F63322A13F90002FB858 /* GE-Thameen-Book-Italic_12.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GE-Thameen-Book-Italic_12.otf"; sourceTree = "<group>"; };
+		F9E7F63A22A34AEC002FB858 /* Swift+Gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Swift+Gif.swift"; sourceTree = "<group>"; };
+		F9E7F63C22A34B85002FB858 /* waves.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = waves.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +96,7 @@
 		F94E576F229C9E5E00CE28F2 /* OMG Group */ = {
 			isa = PBXGroup;
 			children = (
+				F9E7F63522A29EC8002FB858 /* view */,
 				F9E7F630229F55AC002FB858 /* controllers */,
 				F94E5788229D2B4D00CE28F2 /* storyboards */,
 				F94E5784229CB4E800CE28F2 /* side menu */,
@@ -117,6 +122,7 @@
 		F94E5787229D2B2A00CE28F2 /* app */ = {
 			isa = PBXGroup;
 			children = (
+				F9E7F63C22A34B85002FB858 /* waves.gif */,
 				F9E7F63322A13F90002FB858 /* GE-Thameen-Book-Italic_12.otf */,
 				F94E5770229C9E5E00CE28F2 /* AppDelegate.swift */,
 				F94E5779229C9E5F00CE28F2 /* LaunchScreen.storyboard */,
@@ -147,6 +153,14 @@
 			children = (
 			);
 			path = controllers;
+			sourceTree = "<group>";
+		};
+		F9E7F63522A29EC8002FB858 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				F9E7F63A22A34AEC002FB858 /* Swift+Gif.swift */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9E7F63422A1414B002FB858 /* GE-Thameen-Book-Italic_12.otf in Resources */,
+				F9E7F63D22A34B86002FB858 /* waves.gif in Resources */,
 				F94E577B229C9E5F00CE28F2 /* LaunchScreen.storyboard in Resources */,
 				F94E5778229C9E5F00CE28F2 /* Assets.xcassets in Resources */,
 				F94E5776229C9E5E00CE28F2 /* Main.storyboard in Resources */,
@@ -256,12 +271,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-OMG Group/Pods-OMG Group-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
+				"${BUILT_PRODUCTS_DIR}/SoundWave/SoundWave.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SoundWave.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -279,6 +296,7 @@
 				F9276986229DFAF400747C12 /* Extensions.swift in Sources */,
 				F94E5783229CB4C300CE28F2 /* SideMenuTableViewController.swift in Sources */,
 				F9E7F632229F65D6002FB858 /* CustomRadioViewController.swift in Sources */,
+				F9E7F63B22A34AEC002FB858 /* Swift+Gif.swift in Sources */,
 				F9E7F62F229EFEA9002FB858 /* PlayerViewController.swift in Sources */,
 				F9276984229DCFDB00747C12 /* ApiManager.swift in Sources */,
 				F94E578B229D2DF200CE28F2 /* BaseSideMenuViewController.swift in Sources */,

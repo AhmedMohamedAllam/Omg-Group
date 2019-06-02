@@ -432,26 +432,67 @@
                                             <action selector="pauseAndPlay:" destination="kJh-cL-J6s" eventType="touchUpInside" id="iA8-LD-Nv7"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;&lt; live now &gt;&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aq5-24-dxV">
-                                        <rect key="frame" x="138" y="2" width="138.5" height="24"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bpa-WQ-Vwr" customClass="AudioVisualizationView" customModule="SoundWave">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="28"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xC3-aE-pfw">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="28"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="xC3-aE-pfw" firstAttribute="leading" secondItem="Bpa-WQ-Vwr" secondAttribute="leading" id="4Lu-5A-VWU"/>
+                                            <constraint firstAttribute="bottom" secondItem="xC3-aE-pfw" secondAttribute="bottom" id="8sp-5Y-ltZ"/>
+                                            <constraint firstItem="xC3-aE-pfw" firstAttribute="top" secondItem="Bpa-WQ-Vwr" secondAttribute="top" id="YoY-w1-QDc"/>
+                                            <constraint firstAttribute="trailing" secondItem="xC3-aE-pfw" secondAttribute="trailing" id="zf7-Re-Fou"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="frequency">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="waveColor">
+                                                <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="amplitude">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="idleAmplitude">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="phaseShift">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="density">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="primaryLineWidth">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="secondaryLineWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="numberOfWaves">
+                                                <integer key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="meteringLevelBarWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="ey2-05-b0A" firstAttribute="top" secondItem="aq5-24-dxV" secondAttribute="bottom" constant="4" id="Csw-nD-CCy"/>
+                                    <constraint firstItem="Bpa-WQ-Vwr" firstAttribute="top" secondItem="zdF-0i-CFc" secondAttribute="top" id="3NC-Ad-XHW"/>
+                                    <constraint firstItem="Bpa-WQ-Vwr" firstAttribute="leading" secondItem="zdF-0i-CFc" secondAttribute="leading" id="9ro-gH-a9f"/>
+                                    <constraint firstItem="Bpa-WQ-Vwr" firstAttribute="centerX" secondItem="zdF-0i-CFc" secondAttribute="centerX" id="Ec2-G7-z55"/>
                                     <constraint firstItem="ey2-05-b0A" firstAttribute="centerX" secondItem="zdF-0i-CFc" secondAttribute="centerX" id="S4f-dV-DVb"/>
                                     <constraint firstItem="ey2-05-b0A" firstAttribute="centerY" secondItem="zdF-0i-CFc" secondAttribute="centerY" multiplier="1.3" id="Wia-dR-5xR"/>
                                     <constraint firstItem="ey2-05-b0A" firstAttribute="height" secondItem="zdF-0i-CFc" secondAttribute="height" multiplier="0.7" id="caV-rZ-Mn1"/>
-                                    <constraint firstItem="aq5-24-dxV" firstAttribute="centerX" secondItem="zdF-0i-CFc" secondAttribute="centerX" id="qHL-X6-dcF"/>
+                                    <constraint firstAttribute="trailing" secondItem="Bpa-WQ-Vwr" secondAttribute="trailing" id="dt7-t5-yFu"/>
+                                    <constraint firstItem="ey2-05-b0A" firstAttribute="top" secondItem="Bpa-WQ-Vwr" secondAttribute="bottom" constant="2" id="hMY-bM-8fE"/>
                                     <constraint firstAttribute="height" constant="100" id="wY8-FE-rXs"/>
                                 </constraints>
                             </view>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="DtE-TP-Ip2">
-                                <rect key="frame" x="197" y="257" width="20" height="20"/>
-                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -463,13 +504,11 @@
                             <constraint firstItem="cGT-EG-eu3" firstAttribute="top" secondItem="jEK-8l-9El" secondAttribute="top" id="CyT-fV-rKk"/>
                             <constraint firstItem="i9H-vN-J51" firstAttribute="top" secondItem="jpA-EI-j3p" secondAttribute="top" id="Dr5-SS-B4z"/>
                             <constraint firstItem="jpA-EI-j3p" firstAttribute="trailing" secondItem="GIH-s2-cRp" secondAttribute="trailing" id="F1S-vh-Xas"/>
-                            <constraint firstItem="DtE-TP-Ip2" firstAttribute="bottom" secondItem="i9H-vN-J51" secondAttribute="bottom" id="Grx-uS-CQv"/>
                             <constraint firstItem="jpA-EI-j3p" firstAttribute="trailing" secondItem="zdF-0i-CFc" secondAttribute="trailing" id="IvH-dx-JLn"/>
                             <constraint firstItem="jpA-EI-j3p" firstAttribute="bottom" secondItem="ffC-H8-CXN" secondAttribute="bottom" id="MjY-fe-QhP"/>
                             <constraint firstItem="GIH-s2-cRp" firstAttribute="leading" secondItem="jpA-EI-j3p" secondAttribute="leading" id="Pdb-AW-IR8"/>
                             <constraint firstItem="cGT-EG-eu3" firstAttribute="leading" secondItem="jpA-EI-j3p" secondAttribute="leading" id="PtC-Be-S6t"/>
                             <constraint firstItem="ffC-H8-CXN" firstAttribute="leading" secondItem="jpA-EI-j3p" secondAttribute="leading" id="Tnq-4t-mcU"/>
-                            <constraint firstItem="DtE-TP-Ip2" firstAttribute="centerX" secondItem="jEK-8l-9El" secondAttribute="centerX" id="W0e-fr-6PB"/>
                             <constraint firstAttribute="trailing" secondItem="YTH-eR-wSJ" secondAttribute="trailing" id="dc3-jK-7s8"/>
                             <constraint firstItem="aHE-E9-gXY" firstAttribute="top" secondItem="YTH-eR-wSJ" secondAttribute="bottom" constant="8" id="fHJ-xg-Qr4"/>
                             <constraint firstItem="YTH-eR-wSJ" firstAttribute="top" secondItem="GIH-s2-cRp" secondAttribute="bottom" id="fKP-Qr-Jxt"/>
@@ -486,6 +525,7 @@
                     <connections>
                         <outlet property="pauseAndPlayButton" destination="ey2-05-b0A" id="MIp-MQ-nKh"/>
                         <outlet property="radioContainerView" destination="ffC-H8-CXN" id="alh-RT-4P1"/>
+                        <outlet property="wavesImageView" destination="xC3-aE-pfw" id="Yze-Y9-bJu"/>
                         <outlet property="worldListenLabel" destination="aHE-E9-gXY" id="5Gd-FS-y8g"/>
                     </connections>
                 </viewController>

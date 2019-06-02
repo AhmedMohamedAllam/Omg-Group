@@ -14,7 +14,7 @@ class CustomRadioViewController: UIViewController {
     @IBOutlet weak var radioContainerView: UIView!
     @IBOutlet weak var pauseAndPlayButton: UIButton!
     
-    @IBOutlet weak var listenToTheWorldLabel: UILabel!
+    @IBOutlet weak var wavesImageView: UIImageView!
     @IBOutlet weak var worldListenLabel: UILabel!
     var player: AVPlayer!
     var isPlaying = true{
@@ -27,6 +27,7 @@ class CustomRadioViewController: UIViewController {
         super.viewDidLoad()
         addVideoPlayer(to: radioContainerView)
         registerForPlayAndPause()
+        playWavesGif()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -51,6 +52,10 @@ class CustomRadioViewController: UIViewController {
     deinit {
         print("deinit")
         NotificationCenter.default.removeObserver(self)
+    }
+    
+    private func playWavesGif(){
+        wavesImageView.loadGif(name: "waves")
     }
     
     private func updatePauseAndPlayButtonImage(){
