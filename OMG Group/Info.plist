@@ -72,5 +72,7 @@
 	</array>
 	<key>CFBundleName</key>
 	<string>$(PRODUCT_NAME)</string>
+    <key>GADApplicationIdentifier</key>
+    <string>ca-app-pub-1001110363789350~7595359427</string>
 </dict>
 </plist>

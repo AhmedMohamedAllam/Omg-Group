@@ -8,9 +8,11 @@
 
 import UIKit
 import AVKit
+import GoogleMobileAds
 
 class CustomRadioViewController: UIViewController {
 
+    @IBOutlet weak var bannerView: GADBannerView!
     @IBOutlet weak var radioContainerView: UIView!
     @IBOutlet weak var pauseAndPlayButton: UIButton!
     
@@ -28,6 +30,7 @@ class CustomRadioViewController: UIViewController {
         addVideoPlayer(to: radioContainerView)
         registerForPlayAndPause()
         playWavesGif()
+        setupBannerView()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -38,6 +41,13 @@ class CustomRadioViewController: UIViewController {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         player.pause()
+    }
+    
+    
+    private func setupBannerView(){
+        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
     }
     
     @IBAction func pauseAndPlay(_ sender: Any) {
