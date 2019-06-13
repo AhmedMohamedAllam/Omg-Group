@@ -13,9 +13,11 @@ import AVFoundation
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    let apiManager = ApiManager()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        //update Url from admin panel every time
+        apiManager.updateUrls()
         //make splash screen wait two seconds
         RunLoop.current.run(until: Date(timeIntervalSinceNow: 2.0))
         //for  audio to work in background

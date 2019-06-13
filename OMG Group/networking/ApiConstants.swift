@@ -1,23 +1,24 @@
 //
-//  ApiManager.swift
+//  ApiConstants.swift
 //  OMG Group
 //
 //  Created by Ahmed Allam on 5/28/19.
 //  Copyright © 2019 OMG Group. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-struct ApiManager {
-    
+struct ApiConstants {
+    static let BASE_URL = "http://admin.omgchannel.net/api/tv-radio-urls"
+    static let default_radio = URL(string: "http://admin.omgchannelgroup.net/api/tv-radio-urls")
+    static let default_tv = URL(string: "http://admin.omgchannelgroup.net/api/tv-radio-urls")
+
     static func getTVStreamUrl() -> URL{
-        let urlString = "http://oohlivetv.co/live/omgtv/index.m3u8"
-        return URL(string: urlString)!
+        return UrlStorage.getUrl(for: .tv) ?? default_tv!
     }
     
     static func getRadioStreamUrl() -> URL{
-        let urlString = "http://oohlivetv.co/live/omgradio/index.m3u8"
-        return URL(string: urlString)!
+        return  UrlStorage.getUrl(for: .radio) ?? default_radio!
     }
     
     static func getFacebookUrl() -> URL{
@@ -47,3 +48,4 @@ struct ApiManager {
     
     
 }
+

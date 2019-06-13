@@ -62,6 +62,7 @@ class CustomRadioViewController: UIViewController {
         let imageName = isPlaying ? "pause" : "play"
         let image = UIImage(named: imageName)
         pauseAndPlayButton.setImage(image, for: .normal)
+        wavesImageView.isHidden = !isPlaying
     }
     
     private func registerForPlayAndPause() {

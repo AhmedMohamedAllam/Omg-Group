@@ -99,12 +99,12 @@ class HomeViewController: UIViewController {
     }
     
     private func openAboutUs(){
-        let url = ApiManager.getAboutUsUrl()
+        let url = ApiConstants.getAboutUsUrl()
         openUrl(url)
     }
     
     private func openAdvertiseWithUs(){
-        let url = ApiManager.getAdvertisingWithUsUrl()
+        let url = ApiConstants.getAdvertisingWithUsUrl()
         openUrl(url)
     }
     
@@ -135,23 +135,23 @@ extension HomeViewController{
     
     
     @IBAction func facebookDidPressed(_ sender: Any) {
-        let facebookUrl = ApiManager.getFacebookUrl()
+        let facebookUrl = ApiConstants.getFacebookUrl()
         openUrl(facebookUrl)
     }
     
     @IBAction func youtubeDidPressed(_ sender: Any) {
-        let youtubeUrl = ApiManager.getYoutubeUrl()
+        let youtubeUrl = ApiConstants.getYoutubeUrl()
         openUrl(youtubeUrl)
     }
     
     @IBAction func linkedinDidPressed(_ sender: Any) {
-        let linkedinUrl = ApiManager.getLinkedinUrl()
+        let linkedinUrl = ApiConstants.getLinkedinUrl()
         openUrl(linkedinUrl)
     }
     
     
     @IBAction func shareDidPressed(_ sender: Any) {
-        share(url: ApiManager.getAboutUsUrl())
+        share(url: ApiConstants.getAboutUsUrl())
     }
 }
 

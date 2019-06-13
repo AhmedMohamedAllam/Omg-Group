@@ -8,8 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		1DAEBE4F233DA79700A8ADBB /* Pods_OMG_Group.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1B985484DE38D1A5A565173 /* Pods_OMG_Group.framework */; };
-		F9276984229DCFDB00747C12 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9276983229DCFDB00747C12 /* ApiManager.swift */; };
+		F9276984229DCFDB00747C12 /* ApiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9276983229DCFDB00747C12 /* ApiConstants.swift */; };
 		F9276986229DFAF400747C12 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9276985229DFAF400747C12 /* Extensions.swift */; };
+		F9454BD922B2C9680095C7BD /* OmgUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9454BD822B2C9680095C7BD /* OmgUrl.swift */; };
+		F9454BDE22B2CC830095C7BD /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9454BDD22B2CC830095C7BD /* ApiManager.swift */; };
+		F9454BE122B2D3CF0095C7BD /* UrlStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9454BE022B2D3CF0095C7BD /* UrlStorage.swift */; };
 		F94E5771229C9E5E00CE28F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E5770229C9E5E00CE28F2 /* AppDelegate.swift */; };
 		F94E5773229C9E5E00CE28F2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E5772229C9E5E00CE28F2 /* HomeViewController.swift */; };
 		F94E5776229C9E5E00CE28F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F94E5774229C9E5E00CE28F2 /* Main.storyboard */; };
@@ -28,8 +31,11 @@
 		2F1C2BE9B1905ACD92DF89DE /* Pods-OMG Group.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OMG Group.release.xcconfig"; path = "Pods/Target Support Files/Pods-OMG Group/Pods-OMG Group.release.xcconfig"; sourceTree = "<group>"; };
 		C1BEED5923C21298DE5DE78B /* Pods-OMG Group.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OMG Group.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OMG Group/Pods-OMG Group.debug.xcconfig"; sourceTree = "<group>"; };
 		E1B985484DE38D1A5A565173 /* Pods_OMG_Group.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OMG_Group.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F9276983229DCFDB00747C12 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		F9276983229DCFDB00747C12 /* ApiConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConstants.swift; sourceTree = "<group>"; };
 		F9276985229DFAF400747C12 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		F9454BD822B2C9680095C7BD /* OmgUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OmgUrl.swift; sourceTree = "<group>"; };
+		F9454BDD22B2CC830095C7BD /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		F9454BE022B2D3CF0095C7BD /* UrlStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlStorage.swift; sourceTree = "<group>"; };
 		F94E576D229C9E5E00CE28F2 /* OMG Group.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OMG Group.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F94E5770229C9E5E00CE28F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F94E5772229C9E5E00CE28F2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +81,31 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F9454BD722B2C9520095C7BD /* model */ = {
+			isa = PBXGroup;
+			children = (
+				F9454BD822B2C9680095C7BD /* OmgUrl.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		F9454BDA22B2CB8B0095C7BD /* networking */ = {
+			isa = PBXGroup;
+			children = (
+				F9276983229DCFDB00747C12 /* ApiConstants.swift */,
+				F9454BDD22B2CC830095C7BD /* ApiManager.swift */,
+			);
+			path = networking;
+			sourceTree = "<group>";
+		};
+		F9454BDF22B2D3720095C7BD /* presistence */ = {
+			isa = PBXGroup;
+			children = (
+				F9454BE022B2D3CF0095C7BD /* UrlStorage.swift */,
+			);
+			path = presistence;
+			sourceTree = "<group>";
+		};
 		F94E5764229C9E5D00CE28F2 = {
 			isa = PBXGroup;
 			children = (
@@ -96,15 +127,16 @@
 		F94E576F229C9E5E00CE28F2 /* OMG Group */ = {
 			isa = PBXGroup;
 			children = (
+				F9454BDF22B2D3720095C7BD /* presistence */,
+				F9454BDA22B2CB8B0095C7BD /* networking */,
+				F9454BD722B2C9520095C7BD /* model */,
 				F9E7F63522A29EC8002FB858 /* view */,
-				F9E7F630229F55AC002FB858 /* controllers */,
 				F94E5788229D2B4D00CE28F2 /* storyboards */,
 				F94E5784229CB4E800CE28F2 /* side menu */,
 				F94E5789229D2B6500CE28F2 /* view controllers */,
 				F94E5777229C9E5F00CE28F2 /* Assets.xcassets */,
 				F94E5787229D2B2A00CE28F2 /* app */,
 				F94E577C229C9E5F00CE28F2 /* Info.plist */,
-				F9276983229DCFDB00747C12 /* ApiManager.swift */,
 				F9276985229DFAF400747C12 /* Extensions.swift */,
 			);
 			path = "OMG Group";
@@ -146,13 +178,6 @@
 				F9E7F631229F65D6002FB858 /* CustomRadioViewController.swift */,
 			);
 			path = "view controllers";
-			sourceTree = "<group>";
-		};
-		F9E7F630229F55AC002FB858 /* controllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = controllers;
 			sourceTree = "<group>";
 		};
 		F9E7F63522A29EC8002FB858 /* view */ = {
@@ -294,11 +319,14 @@
 			files = (
 				F94E5773229C9E5E00CE28F2 /* HomeViewController.swift in Sources */,
 				F9276986229DFAF400747C12 /* Extensions.swift in Sources */,
+				F9454BE122B2D3CF0095C7BD /* UrlStorage.swift in Sources */,
+				F9454BDE22B2CC830095C7BD /* ApiManager.swift in Sources */,
 				F94E5783229CB4C300CE28F2 /* SideMenuTableViewController.swift in Sources */,
+				F9454BD922B2C9680095C7BD /* OmgUrl.swift in Sources */,
 				F9E7F632229F65D6002FB858 /* CustomRadioViewController.swift in Sources */,
 				F9E7F63B22A34AEC002FB858 /* Swift+Gif.swift in Sources */,
 				F9E7F62F229EFEA9002FB858 /* PlayerViewController.swift in Sources */,
-				F9276984229DCFDB00747C12 /* ApiManager.swift in Sources */,
+				F9276984229DCFDB00747C12 /* ApiConstants.swift in Sources */,
 				F94E578B229D2DF200CE28F2 /* BaseSideMenuViewController.swift in Sources */,
 				F94E5771229C9E5E00CE28F2 /* AppDelegate.swift in Sources */,
 			);

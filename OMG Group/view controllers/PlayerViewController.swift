@@ -39,13 +39,13 @@ class PlayerViewController {
     
     
     private func tvPlayer() -> AVPlayer{
-        let tvUrl = ApiManager.getTVStreamUrl()
+        let tvUrl = ApiConstants.getTVStreamUrl()
         return AVPlayer(url: tvUrl)
     }
     
     
     func radioPlayer() -> AVPlayer{
-        let radioUrl = ApiManager.getRadioStreamUrl()
+        let radioUrl = ApiConstants.getRadioStreamUrl()
         setNowPlayingInfo()
         currentRadioPlayer = AVPlayer(url: radioUrl)
         addPlayCommandCenter()
