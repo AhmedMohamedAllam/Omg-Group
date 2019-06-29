@@ -45,7 +45,7 @@ class CustomRadioViewController: UIViewController {
     
     
     private func setupBannerView(){
-        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.adUnitID = "ca-app-pub-1001110363789350/6542589052"
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
     }
