@@ -596,7 +596,7 @@
     </scenes>
     <resources>
         <image name="TV Channel" width="3508" height="2480"/>
-        <image name="background" width="1200" height="799"/>
+        <image name="background" width="1024" height="576"/>
         <image name="custom-radio" width="3508" height="2480"/>
         <image name="facebbook" width="96" height="96"/>
         <image name="linkedin" width="96" height="96"/>
