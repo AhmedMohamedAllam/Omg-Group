@@ -1,0 +1,187 @@
+# Xcode
+#
+# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
+
+## Build generated
+build/
+DerivedData/
+
+## Various settings
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata/
+
+## Other
+*.moved-aside
+*.xccheckout
+*.xcscmblueprint
+
+## Obj-C/Swift specific
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+## Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# Swift Package Manager
+#
+# Add this line if you want to avoid checking in source code from Swift Package Manager dependencies.
+# Packages/
+# Package.pins
+# Package.resolved
+.build/
+
+# CocoaPods
+#
+# We recommend against adding the Pods directory to your .gitignore. However
+# you should judge for yourself, the pros and cons are mentioned at:
+# https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
+#
+ Pods/
+
+# Carthage
+#
+# Add this line if you want to avoid checking in source code from Carthage dependencies.
+# Carthage/Checkouts
+
+Carthage/Build
+
+# fastlane
+#
+# It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
+# screenshots whenever they are needed.
+# For more information about the recommended setup visit:
+# https://docs.fastlane.tools/best-practices/source-control/#source-control
+
+R.generated.swift
+
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
+Pods/Manifest.lock
+Pods/CenteredCollectionView/LICENSE
+Pods/CenteredCollectionView/README.md
+Pods/CenteredCollectionView/CenteredCollectionView/Classes/CenteredCollectionViewFlowLayout.swift
+Pods/IQKeyboardManagerSwift/LICENSE.md
+Pods/IQKeyboardManagerSwift/README.md
+Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/IQKeyboardManager.swift
+Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/IQKeyboardReturnKeyHandler.swift
+Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/Categories/IQNSArray+Sort.swift
+Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/Categories/IQUIScrollView+Additions.swift
+Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/Categories/IQUITextFieldView+Additions.swift
+Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/Categories/IQUIView+Hierarchy.swift
+Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/Categories/IQUIViewController+Additions.swift
+Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/Constants/IQKeyboardManagerConstants.swift
+Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/Constants/IQKeyboardManagerConstantsInternal.swift
+Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/IQTextView/IQTextView.swift
+Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/IQToolbar/IQBarButtonItem.swift
+Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/IQToolbar/IQInvocation.swift
+Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/IQToolbar/IQPreviousNextView.swift
+Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/IQToolbar/IQTitleBarButtonItem.swift
+Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/IQToolbar/IQToolbar.swift
+Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/IQToolbar/IQUIView+IQKeyboardToolbar.swift
+Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/Resources/IQKeyboardManager.bundle/IQButtonBarArrowDown@2x.png
+Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/Resources/IQKeyboardManager.bundle/IQButtonBarArrowDown@3x.png
+Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/Resources/IQKeyboardManager.bundle/IQButtonBarArrowLeft@2x.png
+Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/Resources/IQKeyboardManager.bundle/IQButtonBarArrowLeft@3x.png
+Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/Resources/IQKeyboardManager.bundle/IQButtonBarArrowRight@2x.png
+Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/Resources/IQKeyboardManager.bundle/IQButtonBarArrowRight@3x.png
+Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/Resources/IQKeyboardManager.bundle/IQButtonBarArrowUp@2x.png
+Pods/IQKeyboardManagerSwift/IQKeyboardManagerSwift/Resources/IQKeyboardManager.bundle/IQButtonBarArrowUp@3x.png
+Pods/KeychainAccess/LICENSE
+Pods/KeychainAccess/README.md
+Pods/KeychainAccess/Lib/KeychainAccess/Keychain.swift
+Pods/Navajo-Swift/LICENSE
+Pods/Navajo-Swift/README.md
+Pods/Navajo-Swift/Source/AllowedCharacterRule.swift
+Pods/Navajo-Swift/Source/BlockRule.swift
+Pods/Navajo-Swift/Source/DictionaryWordRule.swift
+Pods/Navajo-Swift/Source/LengthRule.swift
+Pods/Navajo-Swift/Source/Navajo.swift
+Pods/Navajo-Swift/Source/PasswordRule.swift
+Pods/Navajo-Swift/Source/PasswordValidator.swift
+Pods/Navajo-Swift/Source/PredicateRule.swift
+Pods/Navajo-Swift/Source/RegularExpressionRule.swift
+Pods/Navajo-Swift/Source/RequiredCharacterRule.swift
+Pods/Pods.xcodeproj/project.pbxproj
+Pods/R.swift/License
+Pods/R.swift/rswift
+Pods/R.swift.Library/License
+Pods/R.swift.Library/Readme.md
+Pods/R.swift.Library/Library/Core/ColorResource.swift
+Pods/R.swift.Library/Library/Core/FileResource.swift
+Pods/R.swift.Library/Library/Core/FontResource.swift
+Pods/R.swift.Library/Library/Core/Identifier.swift
+Pods/R.swift.Library/Library/Core/ImageResource.swift
+Pods/R.swift.Library/Library/Core/NibResource.swift
+Pods/R.swift.Library/Library/Core/ReuseIdentifierProtocol.swift
+Pods/R.swift.Library/Library/Core/StoryboardResource.swift
+Pods/R.swift.Library/Library/Core/StoryboardSegueIdentifierProtocol.swift
+Pods/R.swift.Library/Library/Core/StoryboardViewControllerResource.swift
+Pods/R.swift.Library/Library/Core/StringResource.swift
+Pods/R.swift.Library/Library/Core/Validatable.swift
+Pods/R.swift.Library/Library/Foundation/Bundle+FileResource.swift
+Pods/R.swift.Library/Library/Foundation/Data+FileResource.swift
+Pods/R.swift.Library/Library/UIKit/NibResource+UIKit.swift
+Pods/R.swift.Library/Library/UIKit/StoryboardResourceWithInitialController+UIKit.swift
+Pods/R.swift.Library/Library/UIKit/TypedStoryboardSegueInfo+UIStoryboardSegue.swift
+Pods/R.swift.Library/Library/UIKit/UICollectionView+ReuseIdentifierProtocol.swift
+Pods/R.swift.Library/Library/UIKit/UIColor+ColorResource.swift
+Pods/R.swift.Library/Library/UIKit/UIFont+FontResource.swift
+Pods/R.swift.Library/Library/UIKit/UIImage+ImageResource.swift
+Pods/R.swift.Library/Library/UIKit/UINib+NibResource.swift
+Pods/R.swift.Library/Library/UIKit/UIStoryboard+StoryboardResource.swift
+Pods/R.swift.Library/Library/UIKit/UIStoryboard+StoryboardViewControllerResource.swift
+Pods/R.swift.Library/Library/UIKit/UITableView+ReuseIdentifierProtocol.swift
+Pods/R.swift.Library/Library/UIKit/UIViewController+NibResource.swift
+Pods/R.swift.Library/Library/UIKit/UIViewController+StoryboardSegueIdentifierProtocol.swift
+Pods/Target Support Files/CenteredCollectionView/CenteredCollectionView-dummy.m
+Pods/Target Support Files/CenteredCollectionView/CenteredCollectionView-Info.plist
+Pods/Target Support Files/CenteredCollectionView/CenteredCollectionView-prefix.pch
+Pods/Target Support Files/CenteredCollectionView/CenteredCollectionView-umbrella.h
+Pods/Target Support Files/CenteredCollectionView/CenteredCollectionView.modulemap
+Pods/Target Support Files/CenteredCollectionView/CenteredCollectionView.xcconfig
+Pods/Target Support Files/IQKeyboardManagerSwift/IQKeyboardManagerSwift-dummy.m
+Pods/Target Support Files/IQKeyboardManagerSwift/IQKeyboardManagerSwift-Info.plist
+Pods/Target Support Files/IQKeyboardManagerSwift/IQKeyboardManagerSwift-prefix.pch
+Pods/Target Support Files/IQKeyboardManagerSwift/IQKeyboardManagerSwift-umbrella.h
+Pods/Target Support Files/IQKeyboardManagerSwift/IQKeyboardManagerSwift.modulemap
+Pods/Target Support Files/IQKeyboardManagerSwift/IQKeyboardManagerSwift.xcconfig
+Pods/Target Support Files/KeychainAccess/KeychainAccess-dummy.m
+Pods/Target Support Files/KeychainAccess/KeychainAccess-Info.plist
+Pods/Target Support Files/KeychainAccess/KeychainAccess-prefix.pch
+Pods/Target Support Files/KeychainAccess/KeychainAccess-umbrella.h
+Pods/Target Support Files/KeychainAccess/KeychainAccess.modulemap
+Pods/Target Support Files/KeychainAccess/KeychainAccess.xcconfig
+Pods/Target Support Files/Navajo-Swift/Navajo-Swift-dummy.m
+Pods/Target Support Files/Navajo-Swift/Navajo-Swift-Info.plist
+Pods/Target Support Files/Navajo-Swift/Navajo-Swift-prefix.pch
+Pods/Target Support Files/Navajo-Swift/Navajo-Swift-umbrella.h
+Pods/Target Support Files/Navajo-Swift/Navajo-Swift.modulemap
+Pods/Target Support Files/Navajo-Swift/Navajo-Swift.xcconfig
+Pods/Target Support Files/Pods-BYF/Pods-BYF-acknowledgements.markdown
+Pods/Target Support Files/Pods-BYF/Pods-BYF-acknowledgements.plist
+Pods/Target Support Files/Pods-BYF/Pods-BYF-dummy.m
+Pods/Target Support Files/Pods-BYF/Pods-BYF-frameworks.sh
+Pods/Target Support Files/Pods-BYF/Pods-BYF-Info.plist
+Pods/Target Support Files/Pods-BYF/Pods-BYF-umbrella.h
+Pods/Target Support Files/Pods-BYF/Pods-BYF.debug.xcconfig
+Pods/Target Support Files/Pods-BYF/Pods-BYF.modulemap
+Pods/Target Support Files/Pods-BYF/Pods-BYF.release.xcconfig
+Pods/Target Support Files/R.swift/R.swift.xcconfig
+Pods/Target Support Files/R.swift.Library/R.swift.Library-dummy.m
+Pods/Target Support Files/R.swift.Library/R.swift.Library-Info.plist
+Pods/Target Support Files/R.swift.Library/R.swift.Library-prefix.pch
+Pods/Target Support Files/R.swift.Library/R.swift.Library-umbrella.h
+Pods/Target Support Files/R.swift.Library/R.swift.Library.modulemap
+Pods/Target Support Files/R.swift.Library/R.swift.Library.xcconfig
