@@ -28,26 +28,24 @@ class PlayerViewController {
     }
     
     //play tv in full screen
-    func playTV(in viewcontroller: UIViewController) {
-        play(with: tvPlayer(), in: viewcontroller)
+    func playTV(url: URL, in viewcontroller: UIViewController) {
+        play(with: tvPlayer(url: url), in: viewcontroller)
     }
     
     //play radio in full screen
-    func playRadio(in viewcontroller: UIViewController) {
-        play(with: radioPlayer(), in: viewcontroller)
+    func playRadio(url: URL, in viewcontroller: UIViewController) {
+        play(with: radioPlayer(url: url), in: viewcontroller)
     }
     
     
-    private func tvPlayer() -> AVPlayer{
-        let tvUrl = ApiConstants.getTVStreamUrl()
-        return AVPlayer(url: tvUrl)
+    private func tvPlayer(url: URL) -> AVPlayer{
+        return AVPlayer(url: url)
     }
     
     
-    func radioPlayer() -> AVPlayer{
-        let radioUrl = ApiConstants.getRadioStreamUrl()
+    func radioPlayer(url: URL) -> AVPlayer{
         setNowPlayingInfo()
-        currentRadioPlayer = AVPlayer(url: radioUrl)
+        currentRadioPlayer = AVPlayer(url: url)
         addPlayCommandCenter()
         addPauseCommandCenter()
         return currentRadioPlayer!

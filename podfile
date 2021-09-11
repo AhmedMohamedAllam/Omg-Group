@@ -7,7 +7,8 @@ target 'OMG Group' do
 
   # Pods for OMG Group
 pod 'SideMenu'
-pod 'SoundWave'
 pod 'Google-Mobile-Ads-SDK'
+pod 'ImageSlideshow'
+pod "ImageSlideshow/Kingfisher"
 
 end

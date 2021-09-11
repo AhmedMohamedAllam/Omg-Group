@@ -9,7 +9,8 @@
 import UIKit
 
 protocol SideMenuDelegate: class {
-    func didSelectItem(at index: Int)
+    func didSelectSideMenuItem(at index: Int)
+    func channelTitle(at index: Int) -> String?
 }
 
 class SideMenuTableViewController: UITableViewController {
@@ -22,7 +23,7 @@ class SideMenuTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectCell(at: indexPath)
-        delegate?.didSelectItem(at: indexPath.row)
+        delegate?.didSelectSideMenuItem(at: indexPath.row)
     }
     
     override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
@@ -45,9 +46,18 @@ class SideMenuTableViewController: UITableViewController {
         let iconName = isSelected ? "red-sidemenu-\(indexPath.row)" : "sidemenu-\(indexPath.row)"
         iconImageView?.image = UIImage(named: iconName)
         label?.textColor = isSelected ? UIColor.red : UIColor.white
+        if let title = delegate?.channelTitle(at: indexPath.row){
+            label?.text = title
+        }
         tableView.rectForRow(at: indexPath)
     }
     
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+               let label = cell.viewWithTag(1) as? UILabel
+        if let title = delegate?.channelTitle(at: indexPath.row){
+            label?.text = title
+        }
+    }
     
     
 }

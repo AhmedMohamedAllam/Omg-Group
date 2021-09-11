@@ -9,9 +9,10 @@
 import UIKit
 
 struct ApiConstants {
-    static let BASE_URL = "http://admin.omgchannel.net/api/tv-radio-urls"
-    static let default_radio = URL(string: "http://admin.omgchannelgroup.net/api/tv-radio-urls")
-    static let default_tv = URL(string: "http://admin.omgchannelgroup.net/api/tv-radio-urls")
+    static let BASE_URL = "http://admin.omgchannel.net/"
+    static let STORAGE_BASE_URL = "http://admin.omgchannel.net/storage/"
+    static let default_radio = URL(string: "http://admin.omgchannel.net/api/tv-radio-urls")
+    static let default_tv = URL(string: "http://admin.omgchannel.net/api/tv-radio-urls")
 
     static func getTVStreamUrl() -> URL{
         return UrlStorage.getUrl(for: .tv) ?? default_tv!
@@ -26,6 +27,11 @@ struct ApiConstants {
         return URL(string: urlString)!
     }
     
+    static func getInstagramUrl() -> URL{
+        let urlString = "https://www.instagram.com/omg_channel_official/"
+        return URL(string: urlString)!
+    }
+    
     static func getYoutubeUrl() -> URL{
         let urlString = "https://m.youtube.com/channel/UCqc1YeG_iEwmrXVe4wPUhTg"
         return URL(string: urlString)!
@@ -37,7 +43,7 @@ struct ApiConstants {
     }
     
     static func getAboutUsUrl() -> URL{
-        let urlString = "http://omgchannel.net/OMG/About-Us"
+        let urlString = "http://omg.omgchannel.net/aboutus.php"
         return URL(string: urlString)!
     }
     
