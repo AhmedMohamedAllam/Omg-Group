@@ -16,6 +16,7 @@ class VideoPlayerViewController: UIViewController {
 
     @IBOutlet private weak var closeButton: UIButton!
     @IBOutlet private weak var videoView: UIView!
+    @IBOutlet private weak var adsVideoView: UIView!
     @IBOutlet private weak var hashtagLabel: UILabel!
     @IBOutlet private weak var clockLabel: UILabel!
     @IBOutlet weak var imageSlider: ImageSlideshow!
@@ -25,21 +26,26 @@ class VideoPlayerViewController: UIViewController {
     private var adImages: AdImages?
     private lazy var apiManager = ApiManager()
     private var timer: Timer!
-    private var player: Player!
+    private var adVideoTimer: Timer!
+    private var channelPlayer: Player!
+    private var adPlayer: Player!
     private var shouldHideCloseButton = true
     
     var videoUrl: URL?
     var channel: Channel?
+    var adVideo: AdVideo?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         addPlayer()
+        addVideoAdsPlayer()
         configureTapGesture()
         fetchSliderImages()
         closeButton.setTitle("", for: .normal)
         updateOverlaysAccordingToConfigFromAdminPanel()
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector:#selector(updateTime) , userInfo: nil, repeats: true)
         logoImageView.setImageKF(path: channel?.icon)
+        fetchVideoAds()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -78,21 +84,47 @@ class VideoPlayerViewController: UIViewController {
     }
     
     private func addPlayer(){
-        self.player = Player()
-        player.fillMode = .resizeAspectFill
-        player.url = videoUrl
-        player.autoplay = true
-        player.playerDelegate = self
-        player.playbackDelegate = self
+        self.channelPlayer = Player()
+        channelPlayer.fillMode = .resizeAspectFill
+        channelPlayer.url = videoUrl
+        channelPlayer.autoplay = true
     }
+    
+    private func addVideoAdsPlayer(){
+        self.adPlayer = Player()
+        adPlayer.fillMode = .resizeAspectFill
+        adPlayer.url = videoUrl
+        adPlayer.autoplay = true
+        adPlayer.playerDelegate = self
+        adPlayer.playbackDelegate = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        channelPlayer.playFromCurrentTime()
+    }
+    
+    
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        player.view.frame = view.bounds
-        addChild(player)
-        videoView.addSubview(player.view)
-        player.didMove(toParent: self)
-        player.playFromCurrentTime()
+        setChannelVideoFrame()
+        setAdsVideoFrame()
+    }
+    
+    private func setChannelVideoFrame(){
+        channelPlayer.view.frame = view.bounds
+        addChild(channelPlayer)
+        videoView.addSubview(channelPlayer.view)
+        channelPlayer.didMove(toParent: self)
+        channelPlayer.playFromCurrentTime()
+    }
+    
+    private func setAdsVideoFrame(){
+        adPlayer.view.frame = view.bounds
+        addChild(adPlayer)
+        adsVideoView.addSubview(adPlayer.view)
+        adPlayer.didMove(toParent: self)
     }
     
     @IBAction private func didTapClose(_ sender: UIButton){
@@ -134,7 +166,7 @@ class VideoPlayerViewController: UIViewController {
         hashtagLabel.isHidden = !(channel?.activeHashTag ?? false)
         hashtagLabel.text = channel?.hashTag
         clockLabel.isHidden = !(channel?.activeTime ?? false)
-        imageSlider.isHidden = !(channel?.activeImageAds ?? false)
+        imageSlider.isHidden = false //!(channel?.activeImageAds ?? false)
         logoImageView.isHidden = !(channel?.activeLogo ?? false)
     }
     
@@ -145,13 +177,56 @@ class VideoPlayerViewController: UIViewController {
     
 }
 
+extension VideoPlayerViewController{
+    func fetchVideoAds(){
+        apiManager.getData(endpoint: .videoAds, type: AdVideos.self) { [weak self] (result) in
+            guard let self = self else {return}
+            switch result{
+                case .success(let ads):
+                    self.adVideo = ads.first
+                    self.startAdVideoTimer()
+                case .failure(let error):
+                    print(error)
+                    self.showAlert(title: "Something went wrong!", message: "Please try agian later!")
+            }
+        }
+    }
+    
+    func startAdVideoTimer(){
+        guard let period = adVideo?.period else {return}
+        adVideoTimer = Timer.scheduledTimer(timeInterval: TimeInterval(period), target: self, selector:#selector(showAdsVideo) , userInfo: nil, repeats: false)
+        adPlayer.url = adsVideoURL()
+    }
+    
+    func adsVideoURL() -> URL?{
+        let urlPath = adVideo?.videos?.first?.downloadLink ?? ""
+        return URL(string: "\(ApiConstants.STORAGE_BASE_URL)\(urlPath)")
+    }
+    
+    @objc
+    func showAdsVideo(){
+        adsVideoView.isHidden = false
+        adPlayer.playFromBeginning()
+        channelPlayer.pause()
+    }
+    
+    func hideAdsVideo(){
+        adsVideoView.isHidden = true
+        adPlayer.stop()
+        channelPlayer.playFromCurrentTime()
+    }
+}
+
+
+//Ads player delegate
+
 extension VideoPlayerViewController: PlayerDelegate {
     func playerReady(_ player: Player) {
-        
+        print("is ready")
     }
     
     func playerPlaybackStateDidChange(_ player: Player) {
-        
+        print(player.playbackState)
     }
     
     func playerBufferingStateDidChange(_ player: Player) {
@@ -159,7 +234,7 @@ extension VideoPlayerViewController: PlayerDelegate {
     }
     
     func playerBufferTimeDidChange(_ bufferTime: Double) {
-        
+        print(bufferTime)
     }
     
     func player(_ player: Player, didFailWithError error: Error?) {
@@ -178,6 +253,8 @@ extension VideoPlayerViewController: PlayerPlaybackDelegate {
     }
     
     public func playerPlaybackDidEnd(_ player: Player) {
+        hideAdsVideo()
+        startAdVideoTimer()
     }
     
     public func playerCurrentTimeDidChange(_ player: Player) {

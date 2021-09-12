@@ -38,7 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func configureSpeakol(){
         SpeakolManager.shared.speakolToken = "ae3a12e662884604c069b4dfc5a13afd"
-        SpeakolManager.shared.widgetId = "5187"
+        SpeakolManager.shared.widgetId = "wi-8395"
         SpeakolManager.shared.initializeSpeakolWithToken()
     }
 

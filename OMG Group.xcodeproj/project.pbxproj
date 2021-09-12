@@ -21,6 +21,7 @@
 		F94E5783229CB4C300CE28F2 /* SideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E5782229CB4C300CE28F2 /* SideMenuTableViewController.swift */; };
 		F94E578B229D2DF200CE28F2 /* BaseSideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E578A229D2DF200CE28F2 /* BaseSideMenuViewController.swift */; };
 		F962A9DF26ECED0500D3DA06 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F962A9DE26ECED0500D3DA06 /* UIImageView+Extension.swift */; };
+		F9771E2326EE681500BBD898 /* AdsVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9771E2226EE681500BBD898 /* AdsVideoViewController.swift */; };
 		F99B037226EC14750082CD54 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99B037126EC14750082CD54 /* Endpoint.swift */; };
 		F99B037526EC170A0082CD54 /* AdImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99B037426EC170A0082CD54 /* AdImage.swift */; };
 		F99B037826EC177A0082CD54 /* Channels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99B037726EC177A0082CD54 /* Channels.swift */; };
@@ -54,6 +55,7 @@
 		F94E5782229CB4C300CE28F2 /* SideMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewController.swift; sourceTree = "<group>"; };
 		F94E578A229D2DF200CE28F2 /* BaseSideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSideMenuViewController.swift; sourceTree = "<group>"; };
 		F962A9DE26ECED0500D3DA06 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		F9771E2226EE681500BBD898 /* AdsVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsVideoViewController.swift; sourceTree = "<group>"; };
 		F99B037126EC14750082CD54 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		F99B037426EC170A0082CD54 /* AdImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdImage.swift; sourceTree = "<group>"; };
 		F99B037726EC177A0082CD54 /* Channels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channels.swift; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 				F9E7F62E229EFEA9002FB858 /* PlayerViewController.swift */,
 				F94E5772229C9E5E00CE28F2 /* HomeViewController.swift */,
 				F9C7E44726ED850B00160ED2 /* VideoPlayerViewController.swift */,
+				F9771E2226EE681500BBD898 /* AdsVideoViewController.swift */,
 				F9E7F631229F65D6002FB858 /* CustomRadioViewController.swift */,
 			);
 			path = "view controllers";
@@ -359,6 +362,7 @@
 				F99B038226EC1E9A0082CD54 /* MainConfig.swift in Sources */,
 				F9276984229DCFDB00747C12 /* ApiConstants.swift in Sources */,
 				F962A9DF26ECED0500D3DA06 /* UIImageView+Extension.swift in Sources */,
+				F9771E2326EE681500BBD898 /* AdsVideoViewController.swift in Sources */,
 				F9C7E44826ED850B00160ED2 /* VideoPlayerViewController.swift in Sources */,
 				F94E578B229D2DF200CE28F2 /* BaseSideMenuViewController.swift in Sources */,
 				F94E5771229C9E5E00CE28F2 /* AppDelegate.swift in Sources */,

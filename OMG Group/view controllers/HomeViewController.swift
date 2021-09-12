@@ -62,7 +62,7 @@ class HomeViewController: UIViewController {
         fetchChannels()
         fetchMainConfig()
         fetchSliderImages()
-        hideSpeakolView()
+//        hideSpeakolView()
     }
     
 
