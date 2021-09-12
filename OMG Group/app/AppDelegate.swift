@@ -9,6 +9,7 @@
 import UIKit
 import AVFoundation
 import GoogleMobileAds
+import Speakol
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        configureSpeakol()
+        
         //start mobile ads
         GADMobileAds.sharedInstance().start(completionHandler: nil)
         //make splash screen wait two seconds
@@ -30,6 +34,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // This will enable to show nowplaying controls on lock screen
         application.beginReceivingRemoteControlEvents()
         return true
+    }
+    
+    private func configureSpeakol(){
+        SpeakolManager.shared.speakolToken = "ae3a12e662884604c069b4dfc5a13afd"
+        SpeakolManager.shared.widgetId = "5187"
+        SpeakolManager.shared.initializeSpeakolWithToken()
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {

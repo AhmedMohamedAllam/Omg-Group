@@ -12,7 +12,6 @@ extension UIImageView{
     func setImageKF(path: String?, andPlaceholder placeholder:UIImage? = nil, completion: (() -> ())? = nil ){
         let fullURL = "\(ApiConstants.STORAGE_BASE_URL)\(path ?? "")"
         let processor = DownsamplingImageProcessor(size: self.bounds.size)
-        self.kf.indicatorType = .activity
         self.kf.setImage(
             with: URL(string: fullURL),
             placeholder: placeholder,

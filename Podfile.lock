@@ -36,12 +36,14 @@ PODS:
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
   - SideMenu (5.0.3)
+  - Speakol (1.0.1)
 
 DEPENDENCIES:
   - Google-Mobile-Ads-SDK
   - ImageSlideshow
   - ImageSlideshow/Kingfisher
   - SideMenu
+  - Speakol
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -53,6 +55,7 @@ SPEC REPOS:
   trunk:
     - ImageSlideshow
     - Kingfisher
+    - Speakol
 
 SPEC CHECKSUMS:
   Google-Mobile-Ads-SDK: 1e72b4f438d997ab0f2ee62b3a7b0cbcc87c47cb
@@ -62,7 +65,8 @@ SPEC CHECKSUMS:
   Kingfisher: 016c8b653a35add51dd34a3aba36b580041acc74
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   SideMenu: 1dcaabce84538c53325c287f7fe62999379a641c
+  Speakol: e209dee9deeb993a02c3bb15d1fe932b138dadc1
 
-PODFILE CHECKSUM: 58c89d3d5766b290e7752c32567b42a4048e8abb
+PODFILE CHECKSUM: ad91e44875b257d4222d1eee16ad2b00cd709236
 
 COCOAPODS: 1.10.1

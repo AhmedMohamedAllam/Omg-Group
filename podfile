@@ -9,6 +9,6 @@ target 'OMG Group' do
 pod 'SideMenu'
 pod 'Google-Mobile-Ads-SDK'
 pod 'ImageSlideshow'
-pod "ImageSlideshow/Kingfisher"
-
+pod 'ImageSlideshow/Kingfisher'
+pod 'Speakol'
 end
