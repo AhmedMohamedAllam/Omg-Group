@@ -1,0 +1,6 @@
+framework module Pods_OMG_Group {
+  umbrella header "Pods-OMG Group-umbrella.h"
+
+  export *
+  module * { export * }
+}
