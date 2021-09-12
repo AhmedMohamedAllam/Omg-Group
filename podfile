@@ -11,4 +11,5 @@ pod 'Google-Mobile-Ads-SDK'
 pod 'ImageSlideshow'
 pod 'ImageSlideshow/Kingfisher'
 pod 'Speakol'
+pod "Player", "~> 0.13.2"
 end

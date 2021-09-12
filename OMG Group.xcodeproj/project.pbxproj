@@ -27,6 +27,7 @@
 		F99B037C26EC18330082CD54 /* SliderImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99B037B26EC18330082CD54 /* SliderImage.swift */; };
 		F99B037F26EC188E0082CD54 /* VideoAds.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99B037E26EC188E0082CD54 /* VideoAds.swift */; };
 		F99B038226EC1E9A0082CD54 /* MainConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99B038126EC1E9A0082CD54 /* MainConfig.swift */; };
+		F9C7E44826ED850B00160ED2 /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C7E44726ED850B00160ED2 /* VideoPlayerViewController.swift */; };
 		F9E7F62F229EFEA9002FB858 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7F62E229EFEA9002FB858 /* PlayerViewController.swift */; };
 		F9E7F632229F65D6002FB858 /* CustomRadioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7F631229F65D6002FB858 /* CustomRadioViewController.swift */; };
 		F9E7F63422A1414B002FB858 /* GE-Thameen-Book-Italic_12.otf in Resources */ = {isa = PBXBuildFile; fileRef = F9E7F63322A13F90002FB858 /* GE-Thameen-Book-Italic_12.otf */; };
@@ -59,6 +60,7 @@
 		F99B037B26EC18330082CD54 /* SliderImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderImage.swift; sourceTree = "<group>"; };
 		F99B037E26EC188E0082CD54 /* VideoAds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoAds.swift; sourceTree = "<group>"; };
 		F99B038126EC1E9A0082CD54 /* MainConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainConfig.swift; sourceTree = "<group>"; };
+		F9C7E44726ED850B00160ED2 /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
 		F9E7F62E229EFEA9002FB858 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		F9E7F631229F65D6002FB858 /* CustomRadioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRadioViewController.swift; sourceTree = "<group>"; };
 		F9E7F63322A13F90002FB858 /* GE-Thameen-Book-Italic_12.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GE-Thameen-Book-Italic_12.otf"; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 			children = (
 				F9E7F62E229EFEA9002FB858 /* PlayerViewController.swift */,
 				F94E5772229C9E5E00CE28F2 /* HomeViewController.swift */,
+				F9C7E44726ED850B00160ED2 /* VideoPlayerViewController.swift */,
 				F9E7F631229F65D6002FB858 /* CustomRadioViewController.swift */,
 			);
 			path = "view controllers";
@@ -356,6 +359,7 @@
 				F99B038226EC1E9A0082CD54 /* MainConfig.swift in Sources */,
 				F9276984229DCFDB00747C12 /* ApiConstants.swift in Sources */,
 				F962A9DF26ECED0500D3DA06 /* UIImageView+Extension.swift in Sources */,
+				F9C7E44826ED850B00160ED2 /* VideoPlayerViewController.swift in Sources */,
 				F94E578B229D2DF200CE28F2 /* BaseSideMenuViewController.swift in Sources */,
 				F94E5771229C9E5E00CE28F2 /* AppDelegate.swift in Sources */,
 			);

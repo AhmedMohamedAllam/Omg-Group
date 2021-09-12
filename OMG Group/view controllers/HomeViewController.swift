@@ -123,11 +123,18 @@ class HomeViewController: UIViewController {
         navigationController?.pushViewController(customRadioVC, animated: true)
     }
     
-    private func playTV(url: String?){
-        guard let tvURL = URL(string: url ?? "") else {
+    private func playTV(channel: Channel){
+        guard let tvURL = URL(string: channel.tvURL ?? "") else {
             showAlert(title: "Soething went wrong!", message: "Channel url is not valid!")
             return }
-        PlayerViewController.shared.playTV(url: tvURL, in: self)
+        
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "VideoPlayerViewController") as? VideoPlayerViewController{
+            vc.modalPresentationStyle = .fullScreen
+            vc.videoUrl = tvURL
+            vc.channel = channel
+            present(vc, animated: true, completion: nil)
+        }
+//        PlayerViewController.shared.playTV(url: tvURL, in: self)
     }
     
     private func openAboutUs(){
@@ -311,7 +318,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             return
         }
         let channel = channels[index]
-        playTV(url: channel.tvURL)
+        playTV(channel: channel)
     }
     
     func fetchChannels(){
