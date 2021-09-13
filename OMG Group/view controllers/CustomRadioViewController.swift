@@ -9,7 +9,6 @@
 import UIKit
 import AVKit
 import GoogleMobileAds
-import Speakol
 
 class CustomRadioViewController: UIViewController {
 
@@ -19,7 +18,6 @@ class CustomRadioViewController: UIViewController {
     
     @IBOutlet weak var wavesImageView: UIImageView!
     @IBOutlet weak var worldListenLabel: UILabel!
-    @IBOutlet weak var speakolTableView: SpeakolTableView!
 
     var player: AVPlayer!
     var isPlaying = true{
@@ -30,28 +28,11 @@ class CustomRadioViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureSpeakolTableView()
 
         addVideoPlayer(to: radioContainerView)
         registerForPlayAndPause()
         playWavesGif()
         setupBannerView()
-    }
-    
-    func configureSpeakolTableView(){
-        speakolTableView.speakolDelegate = self
-        speakolTableView.speakolDataSource = self
-        speakolTableView.numberOfAds = 1
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        speakolTableView.viewWillAppear()
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        speakolTableView.viewWillDisappear()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -128,17 +109,4 @@ class CustomRadioViewController: UIViewController {
     */
 
     
-}
-
-extension CustomRadioViewController: SpeakolTableViewDelegate, SpeakolTableViewDataSource{
-    func speakolTableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-            //        number_of_your_items_want_to_be_displayed // not the speakol items will be inserted in another section this section is used for the publisher items only
-    }
-    
-func speakolTableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // here you will return the any tableview cell you want to dispaly
-    let cell = speakolTableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as UITableViewCell
-    return cell
-}
 }

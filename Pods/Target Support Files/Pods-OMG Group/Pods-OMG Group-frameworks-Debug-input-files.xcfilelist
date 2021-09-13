@@ -4,5 +4,4 @@ ${BUILT_PRODUCTS_DIR}/ImageSlideshow/ImageSlideshow.framework
 ${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework
 ${BUILT_PRODUCTS_DIR}/Player/Player.framework
 ${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework
-${PODS_ROOT}/Speakol/Speakol.framework
 ${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework

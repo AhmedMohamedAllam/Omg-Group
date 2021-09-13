@@ -13,7 +13,6 @@ import MediaPlayer
 import GoogleMobileAds
 import ImageSlideshow
 import SafariServices
-import Speakol
 
 class HomeViewController: UIViewController {
     let playerViewController = PlayerViewController.shared
@@ -23,8 +22,6 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var channelsCollectionView: UICollectionView!
     @IBOutlet weak var imageSlider: ImageSlideshow!
-    @IBOutlet weak var speakolViewConstraint: NSLayoutConstraint!
-    @IBOutlet weak var speakolCollectionView: SpeakolCollectionView!
 
     private lazy var apiManager = ApiManager()
     var channels: Channels = []
@@ -41,19 +38,9 @@ class HomeViewController: UIViewController {
             baseMenuVC.delegate = self
         }
     }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        speakolCollectionView.viewWillAppear()
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        speakolCollectionView.viewWillDisappear()
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureSpeakol()
         configureChannelsCollectionView()
         configureSidemenuGestures()
         configureImageSliderTap()
@@ -62,7 +49,6 @@ class HomeViewController: UIViewController {
         fetchChannels()
         fetchMainConfig()
         fetchSliderImages()
-//        hideSpeakolView()
     }
     
 
@@ -146,44 +132,6 @@ class HomeViewController: UIViewController {
     private func openAdvertiseWithUs(){
         let url = ApiConstants.getAdvertisingWithUsUrl()
         openUrl(url)
-    }
-    
-    
-    
-}
-
-//MARK:- Speakol ads
-extension HomeViewController{
-    func hideSpeakolView(){
-        speakolViewConstraint.constant = 0
-    }
-    
-    func showSpeakolView(){
-        speakolViewConstraint.constant = 300
-    }
-}
-
-extension HomeViewController: SpeakolCollectionViewDelegate, SpeakolCollectionViewDataSource, SpeakolCollectionViewDelegateFlowLayout{
-    
-    func configureSpeakol(){
-        speakolCollectionView.speakolDelegate = self
-        speakolCollectionView.speakolDataSource = self
-        speakolCollectionView.speakolDelegateFlowLayout = self
-    }
-    
-    func speakolCollectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
-//        number_of_your_items_want_to_be_displayed // not the speakol items will be inserted in another section this section is used for the publisher items only
-    }
-    
-    func speakolCollectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "VideoCollectionViewCell", for: indexPath)
-        return cell
-    }
-    
-    func speakolCollectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let collectionCellSize = collectionView.frame.size.width
-        return CGSize(width: collectionCellSize, height: 300)
     }
 }
 
