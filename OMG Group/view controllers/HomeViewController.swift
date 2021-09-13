@@ -124,6 +124,14 @@ class HomeViewController: UIViewController {
 //        PlayerViewController.shared.playTV(url: tvURL, in: self)
     }
     
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask{
+        return .portrait
+    }
+    
+    override var shouldAutorotate: Bool{
+        false
+    }
+    
     private func openAboutUs(){
         let url = ApiConstants.getAboutUsUrl()
         openUrl(url)

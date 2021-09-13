@@ -18,6 +18,7 @@ class VideoPlayerViewController: UIViewController {
     @IBOutlet private weak var videoView: UIView!
     @IBOutlet private weak var adsVideoView: UIView!
     @IBOutlet private weak var hashtagLabel: UILabel!
+    @IBOutlet private weak var advertisingLabel: UILabel!
     @IBOutlet private weak var clockLabel: UILabel!
     @IBOutlet weak var imageSlider: ImageSlideshow!
     @IBOutlet weak var logoImageView: UIImageView!
@@ -85,14 +86,14 @@ class VideoPlayerViewController: UIViewController {
     
     private func addPlayer(){
         self.channelPlayer = Player()
-        channelPlayer.fillMode = .resizeAspectFill
+        channelPlayer.fillMode = .resizeAspect
         channelPlayer.url = videoUrl
         channelPlayer.autoplay = true
     }
     
     private func addVideoAdsPlayer(){
         self.adPlayer = Player()
-        adPlayer.fillMode = .resizeAspectFill
+        adPlayer.fillMode = .resizeAspect
         adPlayer.url = videoUrl
         adPlayer.autoplay = true
         adPlayer.playerDelegate = self
@@ -104,7 +105,10 @@ class VideoPlayerViewController: UIViewController {
         channelPlayer.playFromCurrentTime()
     }
     
-    
+    deinit {
+        adPlayer.stop()
+        channelPlayer.stop()
+    }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -166,7 +170,8 @@ class VideoPlayerViewController: UIViewController {
         hashtagLabel.isHidden = !(channel?.activeHashTag ?? false)
         hashtagLabel.text = channel?.hashTag
         clockLabel.isHidden = !(channel?.activeTime ?? false)
-        imageSlider.isHidden = false //!(channel?.activeImageAds ?? false)
+        imageSlider.isHidden = !(channel?.activeImageAds ?? false)
+        advertisingLabel.isHidden =  !(channel?.activeImageAds ?? false)
         logoImageView.isHidden = !(channel?.activeLogo ?? false)
     }
     
